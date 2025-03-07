@@ -3,6 +3,11 @@ const navbar = document.getElementById('navbar');
 const logoImg = document.getElementById('logo-img');
 let timeoutId;
 
+
+document.querySelector('.navbar-toggler').addEventListener('click', function () {
+    document.querySelector('.navbar-nav').classList.toggle('show');
+});
+
 window.addEventListener('scroll', function() {
     const currentScrollPos = window.pageYOffset;
 

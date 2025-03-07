@@ -1,0 +1,14 @@
+.inicio {
+    background-image: url('../../images/hero.jpg');
+    display: flex; 
+    
+    justify-content: center; 
+    align-items: center;
+}
+
+.inicio img{
+    max-height: 90%;
+    object-fit: contain;
+    transform: translateY(30px);
+    width: 100%;
+}

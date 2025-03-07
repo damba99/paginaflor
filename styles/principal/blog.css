@@ -1,0 +1,46 @@
+.blog {
+    height: auto;
+}
+
+.slider-container {
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.card-blog {
+    flex: 0 0 33%;
+    width: 30%;
+    height: 500px; 
+    border: none; 
+    border-radius: 12px;
+    padding: 10px;
+    box-sizing: border-box;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: #f9f9f9; 
+    display: flex;
+    flex-direction: column;
+}
+
+.card-blog:hover {
+    transform: translateY(-5px); /* Elevamos la card al hacer hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Aumentamos la sombra al hacer hover */
+}
+
+.card-blog h3 {
+    margin-top: 0;
+    font-size: 1.5em; /* Aumentamos el tamaño del título */
+    margin-bottom: 15px; /* Agregamos margen inferior */
+    color: #333; /* Cambiamos el color del título */
+}
+
+.card-blog p {
+    font-size: 1em;
+    line-height: 1.6; 
+    color: #666; 
+    flex-grow: 1; 
+}
