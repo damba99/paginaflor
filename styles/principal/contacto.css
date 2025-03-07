@@ -1,146 +1,136 @@
-.contacto {
-    height: auto;
-  }
-  
+.contacto-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: var(--verde);
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  margin: 30px auto;
+  max-width: 1100px;
+  box-sizing: border-box;
+}
+
+.mapa {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.derecha {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.redes-sociales {
+  margin-bottom: 20px; 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+}
+
+.redes-sociales a {
+  font-size: 15px;
+  color: #333;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  display: block;
+  margin-bottom: 10px; /* Espacio entre cada enlace de red social */
+}
+
+.redes-sociales i {
+  font-size: 2em;
+  margin-right: 5px;
+}
+
+.redes-sociales a:hover {
+  color: var(--verde);
+  transform: scale(1.05);
+}
+
+.datos-contacto h3 {
+  font-size: 2em;
+  margin-bottom: 25px;
+  color: var(--verde);
+  border-bottom: 2px solid var(--verde);
+  padding-bottom: 10px;
+}
+
+.datos-contacto p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.contacto-form {
+  width: 100%;
+}
+
+.fila{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.fila input,
+.fila textarea {
+  width: 45%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.fila textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: var(--verde);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
   .contacto-container {
-    padding: 10px;
-    color: var(--verde);
-    background-color: #f9f9f9;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    margin: 30px auto;
-    max-width: 1100px;
-    box-sizing: border-box;
-  }
-  
-  .mapa {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin-bottom: 20px; /* Espacio entre el mapa y los datos de contacto */
-  }
-  
-  .mapa iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
-  }
-  
-  .mapa p {
-    margin-bottom: 10px; /* Espacio entre la dirección y el mapa */
-  }
-  
-  .datos-contacto {
-    text-align: left;
-    padding: 20px;
-  }
-  
-  .datos-contacto h3 {
-    font-size: 2em;
-    margin-bottom: 25px;
-    color: var(--verde);
-    border-bottom: 2px solid var(--verde);
-    padding-bottom: 10px;
-  }
-  
-  .datos-contacto p {
-    margin-bottom: 20px;
-    line-height: 1.7;
-    color: #444;
-  }
-  
-  .redes-sociales {
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  .redes-sociales a {
-    margin-right: 15px;
-    font-size: 15px;
-    color: #333;
-    transition: color 0.3s ease;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-  }
-  
-  .redes-sociales i {
-    font-size: 2em;
-    margin-right: 5px;
-  }
-  
-  .redes-sociales a:hover {
-    color: var(--verde);
-    transform: scale(1.05);
-  }
-  
-  .contacto-form {
-    width: 100%;
-  }
-  
-  .form-row {
-    margin-bottom: 15px;
-  }
-  
-  .form-row input,
-  .form-row textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  .form-row textarea {
-    resize: vertical;
-  }
-  
-  button[type="submit"] {
-    background-color: var(--verde);
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    transition: transform 0.3s ease;
-  }
-  
-  button[type="submit"]:hover {
-    transform: scale(1.05);
-  }
-  
-  @media (max-width: 768px) {
-    .contacto-container {
+      flex-direction: column;
       padding: 15px;
-    }
-  
-    .mapa {
-      margin-bottom: 15px;
-    }
-  
-    .mapa iframe {
-        height: 250px;
-    }
-  
-    .datos-contacto {
-        padding: 0;
-    }
-  
-    .redes-sociales {
-        height: auto;
-        padding: 0;
-        display: flex; /* Asegura que los hijos se alineen correctamente */
-        flex-direction: column; /* Apila las redes sociales en una columna */
-        align-items: center; /* Centra las redes sociales horizontalmente */
-    }
-    
-    .redes-sociales a {
-        height: auto;
-        padding: 0;
-        margin: 0; /* Elimina márgenes adicionales */
-        background-color: red;
-    }
   }
+
+  .mapa {
+      width: auto;
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .mapa iframe {
+      height: 250px;
+      width: 100%;
+  }
+
+  .redes-sociales {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 10px;
+  }
+
+  .redes-sociales a {
+      color: var(--verde);
+      font-size: 12px;
+      height: auto;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+}

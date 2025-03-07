@@ -33,9 +33,7 @@
 
 .card-blog h3 {
     margin-top: 0;
-    font-size: 1.5em; /* Aumentamos el tamaño del título */
-    margin-bottom: 15px; /* Agregamos margen inferior */
-    color: #333; /* Cambiamos el color del título */
+    margin-bottom: 25px; /* Agregamos margen inferior */
 }
 
 .card-blog p {
@@ -44,3 +42,31 @@
     color: #666; 
     flex-grow: 1; 
 }
+
+.boton-blog {
+    background-color: var(--verde);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    align-self: flex-end;
+    margin-left: auto; 
+}
+
+.boton-blog:hover {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+    .card-blog {
+        width: 100%;
+    }
+  }

@@ -6,13 +6,15 @@
 .card-nosotros {
     display: flex;
     align-items: flex-start;
-    margin: 30px auto;
-    max-width: 1100px;
+    padding: 20px;
+    margin: 20px;
     height: 250px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e1e1e1;
 }
 
 .card-nosotros img {
@@ -41,4 +43,26 @@
 .card-content p {
     line-height: 1.7;
     color: #444;
+}
+
+@media (max-width: 768px) {
+    .card-nosotros {
+        flex-direction: column; /* Hace que los elementos se apilen verticalmente */
+        height: auto; /* Ajusta la altura para que la tarjeta se ajuste al contenido */
+    }
+
+    .card-nosotros img {
+        width: 100%; /* La imagen ocupará el 100% del ancho disponible */
+        height: 200px; /* Ajusta la altura de la imagen para que no quede demasiado grande */
+        border-radius: 12px 12px 0 0; /* Redondea la parte superior de la imagen */
+        box-shadow: none; /* Elimina la sombra de la imagen */
+    }
+
+    .card-content {
+        padding: 20px; /* Reduce el padding para dar más espacio al contenido */
+    }
+
+    .card-content h3 {
+        margin-top: 15px; /* Asegura que el título no esté pegado al contenido */
+    }
 }
