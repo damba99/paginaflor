@@ -50,7 +50,7 @@
   transform: scale(1.05);
 }
 
-.datos-contacto h3 {
+.derecha h3 {
   font-size: 2em;
   margin-bottom: 25px;
   color: var(--verde);
@@ -72,8 +72,7 @@
   padding-top: 15px;
   padding-bottom: 15px;
 }
-.fila input,
-.fila textarea {
+.fila input{
   width: 45%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -83,6 +82,7 @@
 
 .fila textarea {
   resize: vertical;
+  width: 100%;
 }
 
 button[type="submit"] {
