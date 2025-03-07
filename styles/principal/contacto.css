@@ -118,8 +118,8 @@ button[type="submit"]:hover {
 
   .redes-sociales {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, auto);
+      grid-template-columns: 1fr; /* Solo una columna */
+      grid-template-rows: auto;
       gap: 10px;
   }
 
@@ -129,7 +129,7 @@ button[type="submit"]:hover {
       height: auto;
       padding: 0;
       margin: 0;
-      display: flex;
+      display: block;
       justify-content: center;
       align-items: center;
   }

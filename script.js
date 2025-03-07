@@ -16,7 +16,7 @@ window.addEventListener('scroll', function() {
         logoImg.src = 'images/logos/fv_verde1.png';
     } else {
         navbar.classList.add('navbar-scrolled');
-        logoImg.src = 'images/logos/fv_blanco.png';
+        logoImg.src = 'images/logos/fv_verde1.png';
     }
 
     if (prevScrollPos > currentScrollPos) {

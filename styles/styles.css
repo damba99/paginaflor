@@ -84,7 +84,7 @@ h3 {
 }
 
 .navbar-scrolled .nav-link {
-    color: #fff !important;
+    color: rgb(57, 68, 52) !important;
     transition: color 0.3s ease-in-out;
 }
 
