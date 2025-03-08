@@ -139,7 +139,7 @@
         <div class="card-nosotros">
             <img src="images/nosotros/imagen2.jpg" alt="Imagen 2">
             <div class="card-content">
-                <h3>Lic. Micaela Campos
+                <h3>Lic. Micaela Celeste Campos
                 </h3>
                 <p>Descripción 2.</p>
             </div>
@@ -181,7 +181,7 @@
                 <script async src="//www.instagram.com/embed.js"></script>
             </div>
         </div>
-        <a href="#" class="boton-blog">Ver todos los post</a>
+        <!--<a href="#" class="boton-blog">Ver todos los post</a>-->
     </section>
 
     <section id="contacto" class="section contacto">
@@ -205,16 +205,17 @@
                     <a href="https://wa.me/5493876570793" target="_blank" class="red-social-link">
                         <i class="fab fa-whatsapp"></i> +54 9 387 6570793
                     </a>
-                    <a href="mailto:tucorreo@gmail.com" target="_blank" class="red-social-link">
+                    <a href="mailto:abogadaflorenciavelazques@gmail.com" target="_blank" class="red-social-link">
                         <i class="fas fa-envelope"></i> abogadaflorenciavelazques@gmail.com
                     </a>
                 </div>
                 <div class="datos-contacto">
                     
-                    <form class="contacto-form">
+                    <form class="contacto-form" action="enviar_correo.php" method="POST">
                         <div class="fila">
                             <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
                             <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                        </div>
                         <div class="fila">
                             <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono" required>
                             <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
@@ -222,8 +223,9 @@
                         <div class="fila">
                             <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
                         </div>  
-                            <button type="submit">Enviar</button>
+                        <button type="submit">Enviar</button>
                     </form>
+                    
                 </div>
             </div>
         </div>
