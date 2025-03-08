@@ -1,7 +1,6 @@
 .inicio {
     background-image: url('../../images/hero.jpg');
     display: flex; 
-    height: 75vh;
     justify-content: center; 
     align-items: center;
 }
