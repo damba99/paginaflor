@@ -213,19 +213,37 @@
                     
                     <form class="contacto-form" action="enviar_correo.php" method="POST">
                         <div class="fila">
-                            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                            <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                            <div class="entrada">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                            </div>
+                            <div class="entrada">
+                                <label for="apellido">Apellido</label>
+                                <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                            </div>
                         </div>
+                        
                         <div class="fila">
-                            <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono" required>
-                            <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+                            <div class="entrada">
+                                <label for="telefono">Número de teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono" required>
+                            </div>
+                            <div class="entrada">    
+                                <label for="correo">Correo electrónico</label>
+                                <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+                            </div>
                         </div>
+                        
                         <div class="fila">
-                            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
-                        </div>  
+                            <div class="entrada">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+                            </div>
+                        </div>
+                        
                         <button type="submit">Enviar</button>
                     </form>
-                    
+                                        
                 </div>
             </div>
         </div>
