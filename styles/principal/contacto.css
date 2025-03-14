@@ -1,3 +1,7 @@
+.contacto{
+  height: auto;
+}
+
 .contacto-container {
   display: flex;
   justify-content: space-between;

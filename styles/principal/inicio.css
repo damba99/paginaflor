@@ -1,8 +1,14 @@
 .inicio {
     background-image: url('../../images/hero.jpg');
-    display: flex; 
-    justify-content: center; 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
 }
 
 .inicio img{
