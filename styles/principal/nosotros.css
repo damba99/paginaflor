@@ -53,7 +53,7 @@
 
     .card-nosotros img {
         width: 100%; /* La imagen ocupará el 100% del ancho disponible */
-        height: 200px; /* Ajusta la altura de la imagen para que no quede demasiado grande */
+        height: 400px; /* Ajusta la altura de la imagen para que no quede demasiado grande */
         border-radius: 12px 12px 0 0; /* Redondea la parte superior de la imagen */
         box-shadow: none; /* Elimina la sombra de la imagen */
     }
