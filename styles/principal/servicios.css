@@ -2,9 +2,9 @@
     height: auto;
 }
 
-.contenedor_servicios{
+.contenedor_servicios {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 15px;
 }
@@ -13,31 +13,29 @@
     padding: 0px;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
-}
-
-.contenedor_tarjeta:hover {
-    transform: translateY(-10px);
+    opacity: 0; /* Comienza invisible */
+    animation-duration: 1s;
+    animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
 }
 
 .tarjeta {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    min-height: 140px;  
-    background-color: #ffffff;
-    border-radius: 10px;
+    min-height: 140px;
+    background-color: var(--gris-claro);
     padding: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 .imagen_tarjeta {
     width: 100px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .imagen {
     width: 100px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .imagen_tarjeta_superior {
@@ -65,8 +63,30 @@
     line-height: 1.4;
 }
 
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%); /* Comienza fuera de la pantalla por la izquierda */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* Termina en su posición original */
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%); /* Comienza fuera de la pantalla por la derecha */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* Termina en su posición original */
+        opacity: 1;
+    }
+}
+
 @media (max-width: 768px) {
     .contenedor_servicios {
-        grid-template-columns: 1fr;  
+        grid-template-columns: 1fr;
     }
 }

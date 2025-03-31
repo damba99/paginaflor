@@ -6,13 +6,48 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    min-height: 100vh;
     color: white;
     position: relative;
+    overflow: hidden;
 }
 
-.inicio img{
+.inicio::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    animation: fadeBackground 1.5s ease-in-out forwards;
+}
+
+.inicio img {
     max-height: 90%;
     object-fit: contain;
     transform: translateY(30px);
     width: 100%;
+    z-index: 2;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+}
+
+@keyframes fadeBackground {
+    0% {
+        background: rgba(0, 0, 0, 0);
+    }
+    100% {
+        background: rgba(0, 0, 0, 0.1);
+    }
 }

@@ -43,5 +43,36 @@ navbar.addEventListener('mouseleave', function() {
     }
 });
 
-//CARRUSEL
+//SERVICIOS
+
+// Selecciona el contenedor .servicios
+const serviciosSection = document.querySelector('.servicios');
+
+// Función que se ejecutará cuando el contenedor .servicios entre en la vista
+const handleIntersection = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Si el contenedor .servicios está visible, activa la animación en las tarjetas
+            const tarjetas = document.querySelectorAll('.contenedor_tarjeta');
+            tarjetas.forEach((tarjeta, index) => {
+                // Para las tarjetas impares, animación desde la izquierda
+                if (index % 2 === 0) {
+                    tarjeta.style.animation = 'slideInLeft 1s forwards';
+                } else { // Para las tarjetas pares, animación desde la derecha
+                    tarjeta.style.animation = 'slideInRight 1s forwards';
+                }
+            });
+            observer.disconnect(); // Desconectar el observer una vez que la animación se haya ejecutado
+        }
+    });
+};
+
+// Crea un Intersection Observer
+const observer = new IntersectionObserver(handleIntersection, {
+    threshold: 0.5, // Se activa cuando al menos el 50% del contenedor es visible
+});
+
+// Comienza a observar el contenedor .servicios
+observer.observe(serviciosSection);
+
 

@@ -1,149 +1,135 @@
-.contacto{
+.contacto {
+  background-color: var(--gris-claro);
   height: auto;
 }
 
 .contacto-container {
-  display: flex;
-  justify-content: space-between;
   padding: 10px;
-  color: var(--verde);
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  margin: 30px auto;
-  width: 95%;
-  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .mapa {
   flex: 1;
-  margin-right: 20px;
+  min-width: 300px;
+}
+
+.mapa p {
+  margin-bottom: 15px;
+  color: var(--verde-oscuro);
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--sombra-suave);
 }
 
 .derecha {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.redes-sociales {
-  margin-bottom: 20px; 
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
-  gap: 10px;
-}
-
-.redes-sociales a {
-  font-size: 14px;
-  color: #333;
-  transition: color 0.3s ease;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.redes-sociales i {
-  font-size: 2em;
-  margin-right: 5px;
-}
-
-.redes-sociales a:hover {
-  color: var(--verde);
-  transform: scale(1.05);
+  min-width: 300px;
 }
 
 .derecha h3 {
-  font-size: 2em;
+  color: var(--verde-oscuro);
   margin-bottom: 25px;
-  color: var(--verde);
-  border-bottom: 2px solid var(--verde);
-  padding-bottom: 10px;
+  font-size: 1.8rem;
 }
 
-.datos-contacto p {
-  margin-bottom: 20px;
-  line-height: 1.7;
-  color: #444;
-}
-
-.contacto-form {
-  width: 100%;
-}
-
-.fila{
+.redes-sociales {
   display: flex;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  justify-content: space-between;
-  gap: 10px;
-}
-.fila input{
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 }
 
-.fila textarea {
-  resize: vertical;
-  width: 100%;
+.red-social-link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: var(--gris-texto);
+  flex-direction: column;
+  transition: var(--transicion);
+}
+
+.red-social-link i {
+  font-size: 2rem;
+  color: var(--verde-principal);
+  margin-right: 15px;
+  transition: var(--transicion);
+}
+
+.red-social-link:hover {
+  color: var(--verde-principal);
+}
+
+.red-social-link:hover i {
+  transform: scale(1.2);
+}
+
+/* Formulario de contacto */
+.contacto-form {
+  background-color: var(--gris-claro);
+  padding: 30px;
+}
+
+.fila {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
 .entrada {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
+  flex: 1;
+}
+
+.entrada label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--verde-oscuro);
+  font-weight: 500;
+}
+
+.entrada input,
+.entrada textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  background-color: var(--blanco);
+  transition: var(--transicion);
+}
+
+.entrada input:focus,
+.entrada textarea:focus {
+  outline: none;
+  border-color: var(--verde-principal);
+  box-shadow: 0 0 0 2px rgba(107, 126, 99, 0.2);
+}
+
+.entrada textarea {
+  height: 150px;
+  resize: vertical;
 }
 
 button[type="submit"] {
-  background-color: var(--verde);
-  color: white;
-  padding: 10px 15px;
+  background-color: var(--verde-principal);
+  color: var(--blanco);
   border: none;
-  border-radius: 4px;
+  padding: 12px 30px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  font-weight: 500;
+  transition: var(--transicion);
+  display: block;
+  margin: 0 auto;
 }
 
 button[type="submit"]:hover {
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-  .contacto-container {
-      flex-direction: column;
-      padding: 15px;
-  }
-
-  .mapa {
-      width: auto;
-      margin-right: 0;
-      margin-bottom: 20px;
-  }
-
-  .mapa iframe {
-      height: 250px;
-      width: 100%;
-  }
-
-  .redes-sociales {
-      display: grid;
-      grid-template-columns: 1fr; /* Solo una columna */
-      grid-template-rows: auto;
-      gap: 10px;
-  }
-
-  .redes-sociales a {
-      color: var(--verde);
-      font-size: 12px;
-      height: auto;
-      padding: 0;
-      margin: 0;
-      display: block;
-      justify-content: center;
-      align-items: center;
-  }
+  background-color: var(--verde-oscuro);
+  transform: translateY(-3px);
 }
