@@ -1,0 +1,156 @@
+<style>
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+        height: auto;
+    }
+
+    .contenedor_tarjeta {
+        padding: 0px;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .contenedor_tarjeta:hover {
+        transform: translateY(-10px);
+    }
+
+    .tarjeta {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 140px;  
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .imagen_tarjeta {
+        width: 100px;
+        box-sizing: border-box; 
+    }
+
+    .imagen {
+        width: 100px;
+        box-sizing: border-box; 
+    }
+
+    .imagen_tarjeta_superior {
+        width: 100px;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .cuerpo_tarjeta {
+        margin: 0px 0px 0px 24px;
+        font-family: 'Arial', sans-serif;
+        color: #333;
+    }
+
+    .cuerpo_tarjeta h5 {
+        color: var(--verde);
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .cuerpo_tarjeta p {
+        font-size: 1em;
+        color: #666;
+        line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+        .servicios {
+            grid-template-columns: 1fr;  
+        }
+    }
+</style>
+
+<div class="servicios">
+    <div class="contenedor_tarjeta">
+        <div class="tarjeta">
+            <div class="imagen_tarjeta">
+                <div class="imagen">
+                    <img src="svg/1-derecho_civil.svg" class="imagen_tarjeta_superior" alt="Servicio 1">
+                </div>
+            </div>
+            <div class="cuerpo_tarjeta">
+                <h5 class="titulo_tarjeta">Derecho Civil</h5>
+                <p class="texto_tarjeta">Daños y perjuicios por accidente de tránsito. Prescripción Adquisitiva. Sucesiones. Contratos. Desalojos.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor_tarjeta">
+        <div class="tarjeta">
+            <div class="imagen_tarjeta">
+                <div class="imagen">
+                    <img src="svg/2-derecho_familia.svg" class="imagen_tarjeta_superior" alt="Servicio 2">
+                </div>
+            </div>
+            <div class="cuerpo_tarjeta">
+                <h5 class="titulo_tarjeta">Derecho de Familia</h5>
+                <p class="texto_tarjeta">Cuotas Alimentarias. Régimen de comunicación. Cuidado Personal. Adición/ sustracción de nombre y apellido. Divorcios.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor_tarjeta">
+        <div class="tarjeta">
+            <div class="imagen_tarjeta">
+                <div class="imagen">
+                    <img src="svg/3-administrativo.svg" class="imagen_tarjeta_superior" alt="Servicio 3">
+                </div>
+            </div>
+            <div class="cuerpo_tarjeta">
+                <h5 class="titulo_tarjeta">Derecho Administrativo</h5>
+                <p class="texto_tarjeta">Levantamiento de secuestros de vehículos.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor_tarjeta">
+        <div class="tarjeta">
+            <div class="imagen_tarjeta">
+                <div class="imagen">
+                    <img src="svg/4-previsional.svg" class="imagen_tarjeta_superior" alt="Servicio 4">
+                </div>
+            </div>
+            <div class="cuerpo_tarjeta">
+                <h5 class="titulo_tarjeta">Derecho Previsional</h5>
+                <p class="texto_tarjeta">Jubilaciones ordinarias. Jubilaciones especiales. Pensiones.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor_tarjeta">
+        <div class="tarjeta">
+            <div class="imagen_tarjeta">
+                <div class="imagen">
+                    <img src="svg/5-marcas_y_pantentes.svg" class="imagen_tarjeta_superior" alt="Servicio 5">
+                </div>
+            </div>
+            <div class="cuerpo_tarjeta">
+                <h5 class="titulo_tarjeta">Marcas y Patentes</h5>
+                <p class="texto_tarjeta">Inscripción de marcas y patentes. Asesoramiento a pymes.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor_tarjeta">
+        <div class="tarjeta">
+            <div class="imagen_tarjeta">
+                <div class="imagen">
+                    <img src="svg/6-extrajudiciales.svg" class="imagen_tarjeta_superior" alt="Extrajudiciales">
+                </div>
+            </div>
+            <div class="cuerpo_tarjeta">
+                <h5 class="titulo_tarjeta">Extrajudiciales</h5>
+                <p class="texto_tarjeta">Acompañamiento a mediación. Carta documentos. Redacción de contratos. Gestorías.</p>
+            </div>
+        </div>
+    </div>
+</div>
