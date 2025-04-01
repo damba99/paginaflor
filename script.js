@@ -13,7 +13,7 @@ window.addEventListener('scroll', function() {
 
     if (currentScrollPos === 0) {
         navbar.classList.remove('navbar-scrolled');
-        logoImg.src = 'images/logos/fv_verde1.png';
+        logoImg.src = 'images/logos/fv_blanco.png';
     } else {
         navbar.classList.add('navbar-scrolled');
         logoImg.src = 'images/logos/fv_verde1.png';
