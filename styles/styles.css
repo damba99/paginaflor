@@ -7,6 +7,7 @@
     --gris-texto: rgba(68, 68, 68, 1);
     --marron-acento: rgba(133, 117, 95, 1);
     --blanco: #ffffff;
+    --gris: rgb(221, 224, 245);
     
     --fuente-principal: 'Roboto', sans-serif;
     --fuente-titulo: 'Roboto', sans-serif;
@@ -75,6 +76,12 @@ a:hover {
     z-index: 1;
 }
 
+.navbar{
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 .navbar .nav-link:after {
     content: '';
     position: absolute;
@@ -87,10 +94,9 @@ a:hover {
 }
 
 .navbar .nav-link {
-    color: var(--gris-texto);
-    margin: 0 10px;
+    color: var(--gris);
+    margin: 0 5px;
     position: relative;
-    font-weight: 500;
     transition: var(--transicion);
 }
 
@@ -271,7 +277,7 @@ a:hover {
 
 .footer-bottom {
     margin-top: 1rem;
-    padding-top: 1rem;
+    padding-top: 2rem;
     border-top: 1px solid #333;
     text-align: center;
     color: #999;

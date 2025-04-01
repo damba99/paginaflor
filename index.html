@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
         <div class="container-fluid">
             <a href="#">
-                <img src="images/logos/fv_verde1.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top" id="logo-img">
+                <img src="images/logos/fv_blanco.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top" id="logo-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -31,13 +31,13 @@
                         <a class="nav-link" href="#inicio"><strong>Inicio</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#servicios">Servicios</a>
+                        <a class="nav-link" href="#servicios"><strong>Servicios</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#nosotros">Quienes somos</a>
+                        <a class="nav-link" href="#nosotros"><strong>Quienes somos</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
+                        <a class="nav-link" href="#contacto"><strong>Contacto</strong></a>
                     </li>
                 </ul>
             </div>
@@ -46,7 +46,25 @@
 
     <section id="inicio" class="section inicio">
         <img src="images/marca.png" alt="marca">
+            <div id="contacto-div" class="contacto-div">
+        <div class="redes-sociales">
+            <a href="https://www.instagram.com/abg.florencia/" target="_blank" class="red-social-link">
+                <i class="fab fa-instagram"></i> 
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61558880305161" target="_blank" class="red-social-link">
+                <i class="fab fa-facebook"></i> 
+            </a>
+            <a href="https://wa.me/5493876570793" target="_blank" class="red-social-link">
+                <i class="fab fa-whatsapp"></i> 
+            </a>
+            <a href="mailto:abogadaflorenciavelazques@gmail.com" target="_blank" class="red-social-link">
+                <i class="fas fa-envelope"></i> 
+            </a>
+        </div>
+    </div>
     </section>
+
+
 
     
     <section id="servicios" class="section servicios">
@@ -211,35 +229,13 @@
             </div>
             <div class="derecha">
                 <h3>¡Contactanos!</h3>
-                <div class="redes-sociales">
-                    <a href="https://www.instagram.com/abg.florencia/" target="_blank" class="red-social-link">
-                        <i class="fab fa-instagram"></i> 
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=61558880305161" target="_blank" class="red-social-link">
-                        <i class="fab fa-facebook"></i> 
-                    </a>
-                    <a href="https://wa.me/5493876570793" target="_blank" class="red-social-link">
-                        <i class="fab fa-whatsapp"></i> 
-                    </a>
-                    <a href="mailto:abogadaflorenciavelazques@gmail.com" target="_blank" class="red-social-link">
-                        <i class="fas fa-envelope"></i> 
-                    </a>
-                </div>
                 <div class="datos-contacto">
                     
-                    <form class="contacto-form" name="contacto-form" netlify>
-                        <div class="fila">
+
                             <div class="entrada">
-                                <label for="nombre">Nombre</label>
+                                <label for="nombre">Nombre y apellido</label>
                                 <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
                             </div>
-                            <div class="entrada">
-                                <label for="apellido">Apellido</label>
-                                <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
-                            </div>
-                        </div>
-                        
-                        <div class="fila">
                             <div class="entrada">
                                 <label for="telefono">Número de teléfono</label>
                                 <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono" required>
@@ -248,14 +244,14 @@
                                 <label for="correo">Correo electrónico</label>
                                 <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
                             </div>
-                        </div>
+
                         
-                        <div class="fila">
+
                             <div class="entrada">
                                 <label for="mensaje">Mensaje</label>
                                 <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
                             </div>
-                        </div>
+
                         
                         <button type="submit">Enviar</button>
                     </form>

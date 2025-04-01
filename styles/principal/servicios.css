@@ -12,10 +12,7 @@
 .contenedor_tarjeta {
     padding: 0px;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-    opacity: 0; /* Comienza invisible */
-    animation-duration: 1s;
-    animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
+    opacity: 1;
 }
 
 .tarjeta {
@@ -62,29 +59,6 @@
     color: #666;
     line-height: 1.4;
 }
-
-@keyframes slideInLeft {
-    0% {
-        transform: translateX(-100%); /* Comienza fuera de la pantalla por la izquierda */
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0); /* Termina en su posición original */
-        opacity: 1;
-    }
-}
-
-@keyframes slideInRight {
-    0% {
-        transform: translateX(100%); /* Comienza fuera de la pantalla por la derecha */
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0); /* Termina en su posición original */
-        opacity: 1;
-    }
-}
-
 @media (max-width: 768px) {
     .contenedor_servicios {
         grid-template-columns: 1fr;
