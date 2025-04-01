@@ -16,14 +16,8 @@ window.addEventListener('scroll', function() {
         logoImg.src = 'images/logos/fv_blanco.png';
     } else {
         navbar.classList.add('navbar-scrolled');
-        logoImg.src = 'images/logos/fv_verde1.png';
     }
 
-    if (prevScrollPos > currentScrollPos) {
-        navbar.classList.remove('navbar-hidden');
-    } else {
-        navbar.classList.add('navbar-hidden');
-    }
 
     prevScrollPos = currentScrollPos;
 });

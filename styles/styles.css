@@ -20,7 +20,7 @@ body {
     font-family: var(--fuente-principal);
     color: var(--gris-texto);
     line-height: 1.6;
-    background-color: var(--gris-claro);
+    background-color: var(--gris-texto);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -136,7 +136,7 @@ a:hover {
 }
 
 .navbar-scrolled {
-    background-color: rgba(107, 126, 99, 0.9);
+    background-color: rgba(107, 126, 99, 0.6);
     transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55),
                 background-color 0.5s ease-in-out,
                 opacity 0.7s ease-in-out,
@@ -228,7 +228,7 @@ a:hover {
 }
 
 .red-social-footer i {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--blanco);
     margin-right: 15px;
     transition: var(--transicion);
