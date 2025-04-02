@@ -16,26 +16,13 @@ window.addEventListener('scroll', function() {
         logoImg.src = 'images/logos/fv_blanco.png';
     } else {
         navbar.classList.add('navbar-scrolled');
+        logoImg.src = 'images/logos/fv_verde1.png';
     }
-
 
     prevScrollPos = currentScrollPos;
 });
 
-document.addEventListener('mousemove', function(e) {
-    if (e.clientY < 50) {
-        navbar.classList.remove('navbar-hidden');
-        clearTimeout(timeoutId);
-    }
-});
 
-navbar.addEventListener('mouseleave', function() {
-    if (window.pageYOffset !== 0) { 
-        timeoutId = setTimeout(function() {
-            navbar.classList.add('navbar-hidden');
-        }, 2000);
-    }
-});
 
 //SERVICIOS
 
