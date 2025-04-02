@@ -88,7 +88,8 @@
     }
 
     .card-content {
-        width: 90%;
+        width: 340px; 
+        height: 400px; 
     }
 
     .card-content h3 {
