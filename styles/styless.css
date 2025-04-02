@@ -139,7 +139,7 @@ a:hover {
     position: relative;
     z-index: 2;
     font-size: 2.2rem;
-    color: var(--verde-oscuro);
+    color: var(--beige);
     text-transform: uppercase;
     letter-spacing: 2px;
 }

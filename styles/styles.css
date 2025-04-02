@@ -51,16 +51,17 @@ a:hover {
     text-align: center;
     position: relative;
     margin-bottom: 50px;
+    background-color: var(--verde-oscuro);
 }
 
 .separador h2 {
     display: inline-block;
-    background-color: var(--gris-claro);
+    background-color: var(--verde-oscuro);
     padding: 0 20px;
     position: relative;
     z-index: 2;
     font-size: 2.2rem;
-    color: var(--verde-oscuro);
+    color: var(--beige);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
