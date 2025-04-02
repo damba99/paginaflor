@@ -43,7 +43,7 @@ a:hover {
     background-size: cover;
     background-position: center;
     width: 100%;
-    background-color: var(--gris-claro);
+    background-color: rgb(32, 32, 32);
 
 }
 
