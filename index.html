@@ -332,41 +332,31 @@ document.addEventListener("DOMContentLoaded", function () {
     const leftArrow = document.querySelector('.arrow.left');
     const rightArrow = document.querySelector('.arrow.right');
 
-    let currentPosition = 0;
+    let currentIndex = 0;
 
-    const updateSlider = () => {
-        const containerWidth = sliderContainer.offsetWidth;
-        const totalScrollWidth = cardsWrapper.scrollWidth;
-
-        // Limita el movimiento para que no se pase del final
-        if (currentPosition < 0) {
-            currentPosition = 0;
-        }
-
-        if (currentPosition > totalScrollWidth - containerWidth) {
-            currentPosition = totalScrollWidth - containerWidth;
-        }
-
-        cardsWrapper.style.transform = `translateX(-${currentPosition}px)`;
+    const scrollToCard = () => {
+        const card = cards[0];
+        const cardWidth = card.offsetWidth;
+        const gap = parseFloat(getComputedStyle(cardsWrapper).gap || 0);
+        const offset = (cardWidth + gap) * currentIndex;
+        cardsWrapper.style.transform = `translateX(-${offset}px)`;
     };
 
     rightArrow.addEventListener('click', () => {
-        const card = cards[0];
-        const cardStyle = getComputedStyle(card);
-        const cardWidth = card.offsetWidth + parseFloat(cardStyle.marginRight || 0) + parseFloat(cardStyle.marginLeft || 0);
-        currentPosition += cardWidth;
-        updateSlider();
+        if (currentIndex < cards.length - 1) {
+            currentIndex++;
+            scrollToCard();
+        }
     });
 
     leftArrow.addEventListener('click', () => {
-        const card = cards[0];
-        const cardStyle = getComputedStyle(card);
-        const cardWidth = card.offsetWidth + parseFloat(cardStyle.marginRight || 0) + parseFloat(cardStyle.marginLeft || 0);
-        currentPosition -= cardWidth;
-        updateSlider();
+        if (currentIndex > 0) {
+            currentIndex--;
+            scrollToCard();
+        }
     });
 
-    // Si el tamaño cambia (responsive), recalcula
-    window.addEventListener('resize', updateSlider);
+    window.addEventListener('resize', scrollToCard);
 });
 </script>
+
