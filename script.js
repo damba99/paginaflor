@@ -57,3 +57,60 @@ const observer = new IntersectionObserver(handleIntersection, {
 observer.observe(serviciosSection);
 
 
+//FLECHAS BLOG
+
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.instagram-container');
+    const cards = Array.from(container.children);
+    const leftArrow = document.querySelector('.arrow.left');
+    const rightArrow = document.querySelector('.arrow.right');
+
+    let currentPage = 0;
+
+    function getCardsPerPage() {
+        return window.innerWidth <= 767 ? 1 : 3;
+    }
+
+    function updateView() {
+        const perPage = getCardsPerPage();
+        const totalPages = Math.ceil(cards.length / perPage);
+
+        // Ocultar todas las tarjetas
+        cards.forEach((card, i) => {
+            card.style.display = 'none';
+        });
+
+        // Mostrar solo las de la página actual
+        const start = currentPage * perPage;
+        const end = start + perPage;
+        cards.slice(start, end).forEach(card => {
+            card.style.display = 'block';
+        });
+
+        // Desactivar flechas si estamos al límite
+        leftArrow.disabled = currentPage === 0;
+        rightArrow.disabled = currentPage >= totalPages - 1;
+    }
+
+    leftArrow.addEventListener('click', () => {
+        if (currentPage > 0) {
+            currentPage--;
+            updateView();
+        }
+    });
+
+    rightArrow.addEventListener('click', () => {
+        const perPage = getCardsPerPage();
+        if ((currentPage + 1) * perPage < cards.length) {
+            currentPage++;
+            updateView();
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        currentPage = 0;
+        updateView();
+    });
+
+    updateView();
+});

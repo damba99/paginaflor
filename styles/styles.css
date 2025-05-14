@@ -1,3 +1,4 @@
+
 :root {
     --verde-principal: rgba(107, 126, 99, 1);
     --verde-claro: rgba(142, 166, 132, 1);
@@ -77,6 +78,34 @@ a:hover {
     z-index: 1;
 }
 
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    z-index: 9999;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    font-family: sans-serif;
+    gap: 10px;
+}
+
+.whatsapp-button i {
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+/* Efecto hover */
+.whatsapp-button:hover {
+    background-color: #128C7E;
+}
 .navbar{
     backdrop-filter: blur(5px);
     background: rgba(0, 0, 0, 0.02);
@@ -148,7 +177,7 @@ a:hover {
 }
 
 .navbar-scrolled .nav-link {
-    color: rgb(57, 68, 52) !important;
+    color: var(--beige) !important;
     transition: color 0.3s ease-in-out;
 }
 
@@ -286,4 +315,38 @@ a:hover {
 
 svg {
     width: 1em;
+}
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr; /* una sola columna */
+  }
+
+  .footer-section:nth-child(1) {
+    order: 2;
+  }
+
+  .footer-section:nth-child(2) {
+    order: 1; /* el del medio va primero */
+  }
+
+  .footer-section:nth-child(3) {
+    order: 3;
+  }
+}
+@media (max-width: 767px) {
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        border-radius: 50%;
+        justify-content: center;
+        font-size: 24px;
+        bottom: 10px;
+        right: 10px;
+        gap: 0;
+    }
+
+    .whatsapp-button span {
+        display: none; 
+    }
 }

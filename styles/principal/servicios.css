@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    padding: 15px;
+    padding-inline: 100px;
 }
 
 .contenedor_tarjeta {
@@ -68,6 +68,7 @@
 @media (max-width: 768px) {
     .contenedor_servicios {
         grid-template-columns: 1fr;
+        padding-inline: 15px;
     }
     .imagen_tarjeta_superior {
         width: 80px;
