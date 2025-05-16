@@ -93,7 +93,7 @@
 }
 @media (max-width: 768px) {
     .inicio {
-        background-image: url('../../images/hero_min3.jpg');
+        background-image: url('../../images/hero_min.jpg');
     }
     .contacto-div {
         padding-top: 50px;
