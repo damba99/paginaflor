@@ -347,7 +347,6 @@
 </html>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  // === VALIDACIÓN EN TIEMPO REAL PARA TELÉFONO ===
   const telefonoInput = document.getElementById('telefono');
   const errorTelefono = document.getElementById('errorTelefono');
 
@@ -376,12 +375,13 @@ document.addEventListener("DOMContentLoaded", function () {
       errorTelefono.style.display = 'block';
     }
   });
-
-  // === ENVÍO DE FORMULARIO ===
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
   document.getElementById('miFormulario').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // Limpiar errores previos
     document.querySelectorAll('.error').forEach(el => el.style.display = 'none');
     document.getElementById('mensajeError').style.display = 'none';
 
@@ -392,21 +392,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let valid = true;
 
-    // Validación nombre
     if (!/^[a-zA-ZÀ-ÿ\s]+$/.test(nombre)) {
       document.getElementById('errorNombre').textContent = 'El nombre solo puede contener letras y espacios.';
       document.getElementById('errorNombre').style.display = 'block';
       valid = false;
     }
 
-    // Validación teléfono
     if (!/^[0-9+\s\-\(\)]+$/.test(telefono)) {
-      errorTelefono.textContent = 'El teléfono contiene caracteres inválidos.';
-      errorTelefono.style.display = 'block';
+      document.getElementById('errorTelefono').textContent = 'El teléfono contiene caracteres inválidos.';
+      document.getElementById('errorTelefono').style.display = 'block';
       valid = false;
     }
 
-    // Validación correo
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(correo)) {
       document.getElementById('errorCorreo').textContent = 'Ingrese un correo válido.';
@@ -414,7 +411,6 @@ document.addEventListener("DOMContentLoaded", function () {
       valid = false;
     }
 
-    // Validación mensaje
     if (mensaje.length < 10 || /[<>]/.test(mensaje)) {
       document.getElementById('errorMensaje').textContent = 'El mensaje debe tener al menos 10 caracteres.';
       document.getElementById('errorMensaje').style.display = 'block';
@@ -423,7 +419,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!valid) return;
 
-    // Enviar el formulario
     const form = event.target;
     const data = new FormData(form);
 
@@ -444,8 +439,10 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById('mensajeError').style.display = 'block';
     });
   });
-
-  // === SLIDER BLOG ===
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
   const sliderContainer = document.querySelector('.slider-container');
   const cardsWrapper = document.querySelector('.cards-wrapper');
   const cards = document.querySelectorAll('.card-blog');
@@ -479,4 +476,3 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener('resize', scrollToCard);
 });
 </script>
-
