@@ -51,6 +51,7 @@ a:hover {
 .separador {
     text-align: center;
     position: relative;
+    padding-top: 10px;
     margin-bottom: 50px;
     background-color: var(--verde-oscuro);
 }
