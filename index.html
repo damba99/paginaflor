@@ -242,27 +242,48 @@
             <div class="derecha">
                 <h3>¡Contactanos!</h3>
                 <div class="datos-contacto">
-                    
+                    <form name="contacto-form" method="POST" data-netlify="true">
+                        <input type="hidden" name="form-name" value="contacto-form">
 
-                            <div class="entrada">
-                                <label for="nombre">Nombre y apellido</label>
-                                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                            </div>
-                            <div class="entrada">
-                                <label for="telefono">Número de teléfono</label>
-                                <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono" required>
-                            </div>
-                            <div class="entrada">    
-                                <label for="correo">Correo electrónico</label>
-                                <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
-                            </div>
-                            <div class="entrada">
-                                <label for="mensaje">Mensaje</label>
-                                <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
-                            </div>   
+                        <!-- Honeypot opcional (antibot) -->
+                        <p style="display:none">
+                            <label>No llenar si sos humano: <input name="bot-field"></label>
+                        </p>
+
+                        <div class="entrada">
+                            <label for="nombre">Nombre y apellido</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                            <small class="error" id="errorNombre" style="color:red; display:none;"></small>
+                        </div>
+
+                        <div class="entrada">
+                            <label for="telefono">Número de teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono" required>
+                            <div id="errorTelefono" class="error-message" style="color:red; display:none;">Solo se pueden ingresar números</div>
+                        </div>
+
+                        <div class="entrada">    
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+                            <small class="error" id="errorCorreo" style="color:red; display:none;"></small>
+                        </div>
+
+                        <div class="entrada">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+                            <small class="error" id="errorMensaje" style="color:red; display:none;"></small>
+                        </div>   
+
                         <button type="submit">Enviar</button>
-                    </form>
-                                        
+                        </form>
+                        <!-- Mensajes -->
+                        <div id="mensajeError" style="display:none; color: red; margin-top: 15px;">
+                        Error al enviar el formulario, por favor intenta de nuevo.
+                        </div>
+                        <div id="mensajeExito" style="display:none; color: green; margin-top: 15px;">
+                        ¡Gracias! Tu mensaje fue enviado correctamente.
+                        </div>
+
                 </div>
             </div>
         </div>
@@ -275,7 +296,7 @@
       <h3>Contacto</h3>
       <a href="tel:+5493876570793"><i class="fas fa-phone-alt"></i> +54 9 387 657 0793</a>
       <a href="mailto:abogadaflorenciavelazques@gmail.com"><i class="fas fa-envelope"></i> abogadaflorenciavelazques@gmail.com</a>
-      <a href="https://wa.me/5493876570793" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp directo</a>
+      <a href="https://wa.me/5493876570793" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
       <p style="margin-top: 0.5rem; font-style: italic; color: var(--verde-claro);">🕒 Atención con turno previo</p>
     </div>
 
@@ -326,37 +347,136 @@
 </html>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const sliderContainer = document.querySelector('.slider-container');
-    const cardsWrapper = document.querySelector('.cards-wrapper');
-    const cards = document.querySelectorAll('.card-blog');
-    const leftArrow = document.querySelector('.arrow.left');
-    const rightArrow = document.querySelector('.arrow.right');
+  // === VALIDACIÓN EN TIEMPO REAL PARA TELÉFONO ===
+  const telefonoInput = document.getElementById('telefono');
+  const errorTelefono = document.getElementById('errorTelefono');
 
-    let currentIndex = 0;
+  telefonoInput.addEventListener('keypress', function(event) {
+    const allowedChars = /[0-9+\-\(\)\s]/;
+    const key = event.key;
 
-    const scrollToCard = () => {
-        const card = cards[0];
-        const cardWidth = card.offsetWidth;
-        const gap = parseFloat(getComputedStyle(cardsWrapper).gap || 0);
-        const offset = (cardWidth + gap) * currentIndex;
-        cardsWrapper.style.transform = `translateX(-${offset}px)`;
-    };
+    if (!allowedChars.test(key)) {
+      event.preventDefault();
+      telefonoInput.classList.add('error');
+      errorTelefono.style.display = 'block';
+    } else {
+      telefonoInput.classList.remove('error');
+      errorTelefono.style.display = 'none';
+    }
+  });
 
-    rightArrow.addEventListener('click', () => {
-        if (currentIndex < cards.length - 1) {
-            currentIndex++;
-            scrollToCard();
-        }
+  telefonoInput.addEventListener('input', function() {
+    const value = telefonoInput.value;
+    const valid = /^[0-9+\-\(\)\s]*$/.test(value);
+    if (valid) {
+      telefonoInput.classList.remove('error');
+      errorTelefono.style.display = 'none';
+    } else {
+      telefonoInput.classList.add('error');
+      errorTelefono.style.display = 'block';
+    }
+  });
+
+  // === ENVÍO DE FORMULARIO ===
+  document.getElementById('miFormulario').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Limpiar errores previos
+    document.querySelectorAll('.error').forEach(el => el.style.display = 'none');
+    document.getElementById('mensajeError').style.display = 'none';
+
+    const nombre = document.getElementById('nombre').value.trim();
+    const telefono = document.getElementById('telefono').value.trim();
+    const correo = document.getElementById('correo').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
+
+    let valid = true;
+
+    // Validación nombre
+    if (!/^[a-zA-ZÀ-ÿ\s]+$/.test(nombre)) {
+      document.getElementById('errorNombre').textContent = 'El nombre solo puede contener letras y espacios.';
+      document.getElementById('errorNombre').style.display = 'block';
+      valid = false;
+    }
+
+    // Validación teléfono
+    if (!/^[0-9+\s\-\(\)]+$/.test(telefono)) {
+      errorTelefono.textContent = 'El teléfono contiene caracteres inválidos.';
+      errorTelefono.style.display = 'block';
+      valid = false;
+    }
+
+    // Validación correo
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(correo)) {
+      document.getElementById('errorCorreo').textContent = 'Ingrese un correo válido.';
+      document.getElementById('errorCorreo').style.display = 'block';
+      valid = false;
+    }
+
+    // Validación mensaje
+    if (mensaje.length < 10 || /[<>]/.test(mensaje)) {
+      document.getElementById('errorMensaje').textContent = 'El mensaje debe tener al menos 10 caracteres.';
+      document.getElementById('errorMensaje').style.display = 'block';
+      valid = false;
+    }
+
+    if (!valid) return;
+
+    // Enviar el formulario
+    const form = event.target;
+    const data = new FormData(form);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data).toString()
+    })
+    .then(response => {
+      if (response.ok) {
+        form.style.display = 'none';
+        document.getElementById('mensajeExito').style.display = 'block';
+      } else {
+        document.getElementById('mensajeError').style.display = 'block';
+      }
+    })
+    .catch(() => {
+      document.getElementById('mensajeError').style.display = 'block';
     });
+  });
 
-    leftArrow.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            scrollToCard();
-        }
-    });
+  // === SLIDER BLOG ===
+  const sliderContainer = document.querySelector('.slider-container');
+  const cardsWrapper = document.querySelector('.cards-wrapper');
+  const cards = document.querySelectorAll('.card-blog');
+  const leftArrow = document.querySelector('.arrow.left');
+  const rightArrow = document.querySelector('.arrow.right');
 
-    window.addEventListener('resize', scrollToCard);
+  let currentIndex = 0;
+
+  const scrollToCard = () => {
+    const card = cards[0];
+    const cardWidth = card.offsetWidth;
+    const gap = parseFloat(getComputedStyle(cardsWrapper).gap || 0);
+    const offset = (cardWidth + gap) * currentIndex;
+    cardsWrapper.style.transform = `translateX(-${offset}px)`;
+  };
+
+  rightArrow?.addEventListener('click', () => {
+    if (currentIndex < cards.length - 1) {
+      currentIndex++;
+      scrollToCard();
+    }
+  });
+
+  leftArrow?.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      scrollToCard();
+    }
+  });
+
+  window.addEventListener('resize', scrollToCard);
 });
 </script>
 

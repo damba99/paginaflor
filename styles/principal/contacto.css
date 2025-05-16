@@ -66,6 +66,7 @@
   width: 100%;
   padding: 12px 15px;
   border: 1px solid #ddd;
+  color: var(--blanco);
   border-radius: var(--border-radius);
   background-color: var(--gris-texto);
   transition: var(--transicion);
@@ -98,4 +99,15 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: var(--verde-oscuro);
   transform: translateY(-3px);
+}
+.entrada input.error {
+  border-color: red !important;
+  box-shadow: 0 0 0 4px rgba(255, 0, 0, 0.3) !important;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: none;
 }
