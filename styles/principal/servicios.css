@@ -1,85 +1,54 @@
-.servicios {
-    height: auto;
-}
-
-.contenedor_servicios {
+.services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding-inline: 100px;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
 
-.contenedor_tarjeta {
-    padding: 0px;
-    border-radius: 10px;
-    opacity: 1;
-    align-items: stretch;
+.service-card {
+    background-color: var(--blanco);
+    border-radius: 20px;
+    box-shadow: var(--sombra-ligera);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    min-height: 100%;
 }
 
-.tarjeta {
+.service-card:hover,
+.service-card:focus-within {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-suave);
+}
+
+.service-media {
+    background: linear-gradient(135deg, rgba(107, 126, 99, 0.12), rgba(142, 166, 132, 0.35));
+    padding: 1.5rem 1.5rem 0;
+}
+
+.service-media img {
+    width: 100%;
+    border-radius: 14px;
+}
+
+.service-body {
+    padding: 1.8rem;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 140px;
-    background-color: rgb(39, 39, 44);
-    padding: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-    flex-grow: 1;
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
-
-.imagen_tarjeta {
-    width: 100px;
-    box-sizing: border-box;
+.service-body h3 {
+    font-size: 1.2rem;
 }
 
-.imagen {
-    width: 100px;
-    box-sizing: border-box;
+.service-body p {
+    color: var(--gris-texto);
+    font-size: 0.98rem;
 }
 
-.imagen_tarjeta_superior {
-    width: 100px;
-    padding: 5px;
-    border-radius: 10px;
-}
-
-.cuerpo_tarjeta {
-    margin: 0px 0px 0px 24px;
-    font-family: 'Arial', sans-serif;
-    color: var(--beige);
-}
-
-.cuerpo_tarjeta h5 {
-    color: var(--beige);
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.cuerpo_tarjeta p {
-    font-size: 1em;
-    color: var(--beige);
-    line-height: 1.4;
-}
-@media (max-width: 768px) {
-    .contenedor_servicios {
-        grid-template-columns: 1fr;
-        padding-inline: 15px;
-    }
-    .imagen_tarjeta_superior {
-        width: 80px;
-        box-sizing: border-box;
-    }
-    .imagen_tarjeta {
-        width: 80px;        box-sizing: border-box;
-    }
-    
-    .imagen {
-        width: 80px;
-        box-sizing: border-box;
+@media (max-width: 600px) {
+    .service-body {
+        padding: 1.5rem;
     }
 }
