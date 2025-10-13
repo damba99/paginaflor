@@ -1,116 +1,169 @@
-let prevScrollPos = window.pageYOffset;
 const navbar = document.getElementById('navbar');
 const logoImg = document.getElementById('logo-img');
-let timeoutId;
 
-
-document.querySelector('.navbar-toggler').addEventListener('click', function () {
-    document.querySelector('.navbar-nav').classList.toggle('show');
-});
-
-window.addEventListener('scroll', function() {
-    const currentScrollPos = window.pageYOffset;
-
-    if (currentScrollPos === 0) {
-        navbar.classList.remove('navbar-scrolled');
+const updateNavbarState = () => {
+    if (!navbar || !logoImg) return;
+    if (window.scrollY > 10) {
+        navbar.classList.add('navbar-scrolled');
         logoImg.src = 'images/logos/fv_blanco.png';
     } else {
-        navbar.classList.add('navbar-scrolled');
+        navbar.classList.remove('navbar-scrolled');
         logoImg.src = 'images/logos/fv_verde1.png';
     }
-
-    prevScrollPos = currentScrollPos;
-});
-
-
-
-//SERVICIOS
-
-// Selecciona el contenedor .servicios
-const serviciosSection = document.querySelector('.servicios');
-
-// Función que se ejecutará cuando el contenedor .servicios entre en la vista
-const handleIntersection = (entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            // Si el contenedor .servicios está visible, activa la animación en las tarjetas
-            const tarjetas = document.querySelectorAll('.contenedor_tarjeta');
-            tarjetas.forEach((tarjeta, index) => {
-                // Para las tarjetas impares, animación desde la izquierda
-                if (index % 2 === 0) {
-                    tarjeta.style.animation = 'slideInLeft 1s forwards';
-                } else { // Para las tarjetas pares, animación desde la derecha
-                    tarjeta.style.animation = 'slideInRight 1s forwards';
-                }
-            });
-            observer.disconnect(); // Desconectar el observer una vez que la animación se haya ejecutado
-        }
-    });
 };
 
-// Crea un Intersection Observer
-const observer = new IntersectionObserver(handleIntersection, {
-    threshold: 0.5, // Se activa cuando al menos el 50% del contenedor es visible
-});
-
-// Comienza a observar el contenedor .servicios
-observer.observe(serviciosSection);
-
-
-//FLECHAS BLOG
-
 document.addEventListener('DOMContentLoaded', () => {
-    const container = document.querySelector('.instagram-container');
-    const cards = Array.from(container.children);
-    const leftArrow = document.querySelector('.arrow.left');
-    const rightArrow = document.querySelector('.arrow.right');
+    updateNavbarState();
+    window.addEventListener('scroll', updateNavbarState);
 
-    let currentPage = 0;
-
-    function getCardsPerPage() {
-        return window.innerWidth <= 767 ? 1 : 3;
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    if (navbarToggler) {
+        navbarToggler.addEventListener('click', () => {
+            document.getElementById('navbarNav')?.classList.toggle('show');
+        });
     }
 
-    function updateView() {
-        const perPage = getCardsPerPage();
-        const totalPages = Math.ceil(cards.length / perPage);
+    const telefonoInput = document.getElementById('telefono');
+    const errorTelefono = document.getElementById('errorTelefono');
 
-        // Ocultar todas las tarjetas
-        cards.forEach((card, i) => {
-            card.style.display = 'none';
+    const validateTelefonoInput = (value) => /^[0-9+\-()\s]*$/.test(value);
+
+    if (telefonoInput) {
+        telefonoInput.addEventListener('keypress', (event) => {
+            const key = event.key;
+            if (!validateTelefonoInput(key)) {
+                event.preventDefault();
+                if (errorTelefono) {
+                    errorTelefono.textContent = 'Solo se permiten números y símbolos + - ( )';
+                }
+            }
         });
 
-        // Mostrar solo las de la página actual
-        const start = currentPage * perPage;
-        const end = start + perPage;
-        cards.slice(start, end).forEach(card => {
-            card.style.display = 'block';
+        telefonoInput.addEventListener('input', () => {
+            const isValid = validateTelefonoInput(telefonoInput.value);
+            telefonoInput.classList.toggle('error', !isValid);
+            if (errorTelefono) {
+                errorTelefono.textContent = isValid ? '' : 'Solo se permiten números y símbolos + - ( )';
+            }
         });
-
-        // Desactivar flechas si estamos al límite
-        leftArrow.disabled = currentPage === 0;
-        rightArrow.disabled = currentPage >= totalPages - 1;
     }
 
-    leftArrow.addEventListener('click', () => {
-        if (currentPage > 0) {
-            currentPage--;
-            updateView();
-        }
-    });
+    const form = document.getElementById('contact-form');
+    const mensajeError = document.getElementById('mensajeError');
+    const mensajeExito = document.getElementById('mensajeExito');
 
-    rightArrow.addEventListener('click', () => {
-        const perPage = getCardsPerPage();
-        if ((currentPage + 1) * perPage < cards.length) {
-            currentPage++;
-            updateView();
-        }
-    });
+    if (form) {
+        const fields = {
+            nombre: document.getElementById('errorNombre'),
+            telefono: errorTelefono,
+            correo: document.getElementById('errorCorreo'),
+            mensaje: document.getElementById('errorMensaje'),
+        };
 
-    window.addEventListener('resize', () => {
-        currentPage = 0;
-        updateView();
-    });
+        const inputs = {
+            nombre: form.nombre,
+            telefono: form.telefono,
+            correo: form.correo,
+            mensaje: form.mensaje,
+        };
 
-    updateView();
+        const resetFeedback = () => {
+            Object.values(fields).forEach((field) => {
+                if (field) field.textContent = '';
+            });
+            Object.values(inputs).forEach((input) => {
+                if (input) input.classList.remove('error');
+            });
+            if (mensajeError) mensajeError.style.display = 'none';
+            if (mensajeExito) mensajeExito.style.display = 'none';
+        };
+
+        const setError = (fieldKey, message) => {
+            const fieldMessage = fields[fieldKey];
+            if (fieldMessage) fieldMessage.textContent = message;
+            const input = inputs[fieldKey];
+            if (input) input.classList.add('error');
+        };
+
+        const validators = {
+            nombre: (value) => /^[a-zA-ZÁÉÍÓÚÜÑáéíóúüñ\s]+$/.test(value.trim()),
+            telefono: (value) => /^[0-9+\-()\s]+$/.test(value.trim()),
+            correo: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()),
+            mensaje: (value) => value.trim().length >= 10 && !/[<>]/.test(value),
+        };
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            resetFeedback();
+
+            const data = {
+                nombre: form.nombre.value,
+                telefono: form.telefono.value,
+                correo: form.correo.value,
+                mensaje: form.mensaje.value,
+            };
+
+            let valid = true;
+
+            Object.entries(data).forEach(([key, value]) => {
+                if (!validators[key](value)) {
+                    valid = false;
+                    switch (key) {
+                        case 'nombre':
+                            setError(key, 'El nombre solo puede contener letras y espacios.');
+                            break;
+                        case 'telefono':
+                            setError(key, 'El teléfono contiene caracteres inválidos.');
+                            break;
+                        case 'correo':
+                            setError(key, 'Ingresá un correo electrónico válido.');
+                            break;
+                        case 'mensaje':
+                            setError(key, 'El mensaje debe tener al menos 10 caracteres.');
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            });
+
+            if (!valid) {
+                if (mensajeError) {
+                    mensajeError.textContent = 'Revisá la información ingresada.';
+                    mensajeError.style.display = 'block';
+                }
+                return;
+            }
+
+            const formData = new FormData(form);
+            const payload = new URLSearchParams(formData).toString();
+
+            try {
+                const response = await fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: payload,
+                });
+
+                if (response.ok) {
+                    form.reset();
+                    Object.values(inputs).forEach((input) => input.classList.remove('error'));
+                    if (mensajeExito) {
+                        mensajeExito.textContent = '¡Gracias! Tu mensaje fue enviado correctamente.';
+                        mensajeExito.style.display = 'block';
+                    }
+                    if (mensajeError) {
+                        mensajeError.style.display = 'none';
+                    }
+                } else {
+                    throw new Error('Error en el envío');
+                }
+            } catch (error) {
+                if (mensajeError) {
+                    mensajeError.textContent = 'No pudimos enviar el formulario. Intentalo nuevamente.';
+                    mensajeError.style.display = 'block';
+                }
+            }
+        });
+    }
 });
