@@ -1,5 +1,5 @@
 .inicio {
-    background-image: url('../../images/hero.jpg');
+    background-image: url('../../images/heroj.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: 100vh;
+    max-height: 50vh;
     color: white;
     position: relative;
     overflow: hidden;
@@ -25,7 +25,7 @@
 }
 
 .inicio img {
-    max-height: 90%;
+    max-height: 100%;
     object-fit: contain;
     transform: translateY(30px);
     width: 100%;

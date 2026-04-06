@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link rel="stylesheet" href="/styles/styles.css"/>
+<link rel="stylesheet" href="/styles/servicios.css"/>
+<link rel="stylesheet" href="/styles/contacto.css"/>
+
+
+<title>Contacto | Florencia Velazques A.</title>
+</head>
+
+<body class="page-body">
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <img class="navbar-logo" src="/images/logos/fv_verde1.png"/>
+
+    <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="navbar-menu">
+      <a class="nav-link" href="index.html">Inicio</a>
+      <a class="nav-link" href="servicios.html">Servicios</a>
+      <a class="nav-link" href="nosotros.html">Quienes somos</a>
+      <a class="nav-link nav-link-active" href="contacto.html">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<main class="main-content">
+    <section id="inicio" class="section inicio">
+        
+    </section>
+<!-- HERO -->
+<section class="hero-section">
+  <div class="hero-container">
+
+    <div class="hero-left">
+      <span class="hero-subtitle">CONTACTO</span>
+      <h1 class="hero-title">
+        ¿Necesitás nuestra <br/>
+        <span class="text-accent italic">ayuda?</span>
+      </h1>
+    </div>
+
+    <div class="hero-right">
+      <p class="hero-description">
+                        Establezca un diálogo con la excelencia jurídica. Nuestro atelier digital está diseñado para ofrecer respuestas precisas a desafíos legales complejos.
+
+      </p>
+      <div class="hero-divider"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECCIÓN DE REDES SOCIALES -->
+<section class="social-section">
+  <div class="social-container">
+    <p>Conectemos en redes sociales</p>
+    <div class="social-icons">
+      <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+      <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<div class="contacto-container">
+            <div class="mapa">
+                <p><strong>Barrio Mirasoles Manzana 498 A casa 15, Ciudad de Salta</strong></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14495.961561195005!2d-65.43247211085877!3d-24.727210180091937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc1a2f7a2f6bb%3A0xbf3b8bce82918d8e!2sEstudio%20Juridico%20Integral%20Velazques%20Ayarde!5e0!3m2!1ses-419!2sar!4v1741299698189!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="derecha">
+                <h3>¡Contactanos!</h3>
+                <div class="datos-contacto">
+                    <form name="contacto-form" method="POST" data-netlify="true">
+                        <input type="hidden" name="form-name" value="contacto-form">
+
+                        <!-- Honeypot opcional (antibot) -->
+                        <p style="display:none">
+                            <label>No llenar si sos humano: <input name="bot-field"></label>
+                        </p>
+
+                        <div class="entrada">
+                            <label for="nombre">Nombre y apellido</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                            <small class="error" id="errorNombre" style="color:red; display:none;"></small>
+                        </div>
+
+                        <div class="entrada">
+                            <label for="telefono">Número de teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono" required>
+                            <div id="errorTelefono" class="error-message" style="color:red; display:none;">Solo se pueden ingresar números</div>
+                        </div>
+
+                        <div class="entrada">    
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+                            <small class="error" id="errorCorreo" style="color:red; display:none;"></small>
+                        </div>
+
+                        <div class="entrada">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+                            <small class="error" id="errorMensaje" style="color:red; display:none;"></small>
+                        </div>   
+
+                        <button type="submit">Enviar</button>
+                        </form>
+                        <!-- Mensajes -->
+                        <div id="mensajeError" style="display:none; color: red; margin-top: 15px;">
+                        Error al enviar el formulario, por favor intenta de nuevo.
+                        </div>
+                        <div id="mensajeExito" style="display:none; color: green; margin-top: 15px;">
+                        ¡Gracias! Tu mensaje fue enviado correctamente.
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- CTA -->
+</main>
+
+<footer class="footer">
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+      <div>
+        <h4 class="footer-title">Contacto</h4>
+        <div class="footer-contact-list">
+          <a href="tel:+5493876570793" class="footer-link"><span class="material-symbols-outlined">call</span><span>+54 9 387 657 0793</span></a>
+          <a href="mailto:abogadaflorenciavelazques@gmail.com" class="footer-link"><span class="material-symbols-outlined">mail</span><span>abogadaflorenciavelazques@gmail.com</span></a>
+          <a href="https://wa.me/5493876570793" target="_blank" class="footer-link"><span class="material-symbols-outlined">chat</span><span>WhatsApp</span></a>
+          <div class="footer-item"><span class="material-symbols-outlined">schedule</span><span>Atención con turno previo</span></div>
+        </div>
+      </div>
+      <div class="footer-center">
+        <img class="footer-logo" src="images/sera_justicia-07.png"/>
+        <div class="footer-social-icons">
+          <a href="tel:+5493876570793" class="social-icon"><i class="fa-solid fa-phone"></i></a>
+          <a href="https://www.instagram.com/abg.florencia/" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61558880305161" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://wa.me/5493876570793" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:abogadaflorenciavelazques@gmail.com" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-location">
+        <h4 class="footer-title">Ubicación</h4>
+        <a href="https://maps.app.goo.gl/goGy7ivc9SQD79vU8" target="_blank" class="footer-address">Barrio Mirasoles Manzana 498 A<br>casa 15, Ciudad de Salta</a>
+        <p class="footer-company">Estudio Jurídico Integral<br>Velazques Ayarde</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copyright">© 2025 Estudio Jurídico Integral Velazques Ayarde. Todos los derechos reservados.</p></div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggler = document.querySelector('.navbar-toggler');
+  const menu = document.querySelector('.navbar-menu');
+  toggler.addEventListener('click', function() {
+    menu.classList.toggle('active');
+  });
+});
+</script>
+
+</body>
+</html>

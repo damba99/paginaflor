@@ -56,11 +56,33 @@ const observer = new IntersectionObserver(handleIntersection, {
 // Comienza a observar el contenedor .servicios
 observer.observe(serviciosSection);
 
+// Eliminamos clase loading y aplicamos animación de transición de página
+window.addEventListener('load', () => {
+    document.body.classList.remove('loading');
+});
+
+// Navegación de tarjetas de servicios con animación leve
+const tarjetasServicios = document.querySelectorAll('.contenedor_tarjeta');
+tarjetasServicios.forEach(tarjeta => {
+    tarjeta.style.cursor = 'pointer';
+    tarjeta.addEventListener('click', () => {
+        const href = tarjeta.getAttribute('data-href');
+        if (href) {
+            document.body.classList.add('loading');
+            setTimeout(() => {
+                window.location.href = href;
+            }, 220);
+        }
+    });
+});
+
 
 //FLECHAS BLOG
 
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.instagram-container');
+    if (!container) return;
+
     const cards = Array.from(container.children);
     const leftArrow = document.querySelector('.arrow.left');
     const rightArrow = document.querySelector('.arrow.right');

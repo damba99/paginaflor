@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Derecho Civil | Florencia Velazques A.</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+  <!-- Font Awesome (LA PIEZA QUE TE FALTABA) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            background: "#121414",
+            primary: "#bbccab",
+            "on-surface": "#e2e2e2",
+            "on-surface-variant": "#c5c8bc"
+          },
+          fontFamily: {
+            headline: ["Manrope"],
+            body: ["Inter"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .glass-card {
+      background: rgba(40, 42, 42, 0.8);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-surface font-body">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full z-50 bg-[#121414]/70 backdrop-blur-md border-b border-white/10">
+  <div class="flex justify-between items-center px-12 py-6 max-w-[1440px] mx-auto">
+    
+    <img class="h-[52px]" src="/images/logos/fv_verde1.png"/>
+
+    <div class="hidden md:flex space-x-10 text-sm">
+      <a class="text-gray-400 hover:text-primary" href="#">Inicio</a>
+      <a class="text-primary border-b border-primary pb-1" href="#">Servicios</a>
+      <a class="text-gray-400 hover:text-primary" href="#">Quienes somos</a>
+      <a class="text-gray-400 hover:text-primary" href="#">Contacto</a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- FOOTER -->
+<footer class="w-full pt-24 pb-12 bg-[#121414] border-t border-[#282a2a]/15">
+  <div class="max-w-[1440px] mx-auto px-12 py-16">
+    
+    <div class="grid md:grid-cols-3 gap-12">
+
+      <!-- CONTACTO -->
+<div>
+  <h4 class="font-bold uppercase tracking-widest mb-4">Contacto</h4>
+
+  <div class="space-y-3 text-sm text-on-surface-variant">
+
+    <a href="tel:+5493876570793" class="flex gap-3 items-center hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-primary">call</span>
+      <span>+54 9 387 657 0793</span>
+    </a>
+
+    <a href="mailto:abogadaflorenciavelazques@gmail.com" class="flex gap-3 items-center hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-primary">mail</span>
+      <span>abogadaflorenciavelazques@gmail.com</span>
+    </a>
+
+    <a href="https://wa.me/5493876570793" target="_blank" class="flex gap-3 items-center hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-primary">chat</span>
+      <span>WhatsApp</span>
+    </a>
+
+    <div class="flex gap-3 items-center italic text-primary">
+      <span class="material-symbols-outlined">schedule</span>
+      <span>Atención con turno previo</span>
+    </div>
+
+  </div>
+</div>
+
+      <!-- CENTRO -->
+      <div class="text-center">
+        <img class="h-21 mx-auto mb-6" src="images/sera_justicia-07.png"/>
+
+        <!-- ICONOS -->
+<div class="flex justify-center gap-6 text-xl">
+
+  <a href="tel:+5493876570793" class="text-on-surface-variant hover:text-primary transition-all duration-300 transform hover:scale-125">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+
+  <a href="https://www.instagram.com/abg.florencia/" class="text-on-surface-variant hover:text-primary transition-all duration-300 transform hover:scale-125">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://www.facebook.com/profile.php?id=61558880305161" class="text-on-surface-variant hover:text-primary transition-all duration-300 transform hover:scale-125">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+
+  <a href="https://wa.me/5493876570793" class="text-on-surface-variant hover:text-primary transition-all duration-300 transform hover:scale-125">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <a href="mailto:abogadaflorenciavelazques@gmail.com" class="text-on-surface-variant hover:text-primary transition-all duration-300 transform hover:scale-125">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+
+  <a href="#" class="text-on-surface-variant hover:text-primary transition-all duration-300 transform hover:scale-125">
+    <i class="fa-brands fa-tiktok"></i>
+  </a>
+
+</div>
+      </div>
+
+      <!-- UBICACIÓN -->
+<div class="md:text-right text-sm text-on-surface-variant">
+  <h4 class="font-bold uppercase tracking-widest mb-4">Ubicación</h4>
+
+  <a href="https://maps.app.goo.gl/goGy7ivc9SQD79vU8" target="_blank" class="hover:text-primary transition-colors inline-block">
+    Barrio Mirasoles Manzana 498 A <br>
+    casa 15, Ciudad de Salta
+  </a>
+
+  <p class="text-primary font-semibold mt-2">
+    Estudio Jurídico Integral <br>
+    Velazques Ayarde
+  </p>
+</div>
+
+</footer>
+  <!-- Bottom Bar -->
+  <div class="border-t border-outline-variant/10 w-full">
+    <div class="py-6 text-center">
+      <p class="text-xs text-on-surface-variant/60">
+        © 2025 Estudio Jurídico Integral Velazques Ayarde. Todos los derechos reservados.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

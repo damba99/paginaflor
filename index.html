@@ -1,487 +1,672 @@
 <!DOCTYPE html>
 <html lang="es">
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CFF88H186Z');
-</script>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abogada Florencia Velazques</title>
-    <link rel="icon" type="image/png" href="images/logos/fv_verde1.png">
-    <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="stylesheet" href="/styles/principal/inicio.css">
-    <link rel="stylesheet" href="/styles/principal/servicios.css">
-    <link rel="stylesheet" href="/styles/principal/nosotros.css">
-    <link rel="stylesheet" href="/styles/principal/blog.css">
-    <link rel="stylesheet" href="/styles/principal/contacto.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CFF88H186Z"></script>
-</head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Florencia velazques A. Abogada | Estudio Jurídico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    :root {
+      --bg: #121414;
+      --surface: #1a1c1c;
+      --surface-2: #282a2a;
+      --text: #e2e2e2;
+      --text-muted: #8a8d8d;
+      --accent: #bbccab;
+      --accent-strong: #dac769;
+      --max: 1260px;
+    }
 
-<body class="loading">
-    <a href="https://wa.me/5493876570793" target="_blank" class="whatsapp-button">
-        <strong><span>387 657 0793</span>
-        <i class="fab fa-whatsapp"></i></strong>
-    </a>
-    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
-        <div class="container-fluid">
-            <a href="#">
-                <img src="images/logos/fv_blanco.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top" id="logo-img">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#inicio"><strong>Inicio</strong></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#servicios"><strong>Servicios</strong></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#nosotros"><strong>Quienes somos</strong></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto"><strong>Contacto</strong></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>   
+    .landing-hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
 
-    <section id="inicio" class="section inicio">
-        <img src="images/marca.png" alt="marca">
-            <div id="contacto-div" class="contacto-div">
-        <div class="redes-sociales">
-            <a href="https://www.instagram.com/abg.florencia/" target="_blank" class="red-social-link">
-                <i class="fab fa-instagram"></i> 
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=61558880305161" target="_blank" class="red-social-link">
-                <i class="fab fa-facebook"></i> 
-            </a>
-            <a href="https://wa.me/5493876570793" target="_blank" class="red-social-link">
-                <i class="fab fa-whatsapp"></i> 
-            </a>
-            <a href="mailto:abogadaflorenciavelazques@gmail.com" target="_blank" class="red-social-link">
-                <i class="fas fa-envelope"></i> 
-            </a>
-        </div>
-    </div>
-    </section>
+    .landing-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
 
+.landing-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top; /* Asegura que la parte superior de la imagen siempre sea visible */
+  filter: grayscale(0%) opacity(0.4);
+}
+@media (max-width: 768px) {
+   .landing-hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(0%) opacity(0.4);
+    }
+    .landing-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }}
 
+    .landing-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(18, 20, 20, 0.6), rgba(18, 20, 20, 0.8));
+    }
 
-    
-    <section id="servicios" class="section servicios">
-        <div class="separador">
-            <h2>SERVICIOS</h2>
-        </div>
-        <div class="contenedor_servicios">
-            <div class="contenedor_tarjeta">
-                <div class="tarjeta">
-                    <div class="imagen_tarjeta">
-                        <div class="imagen">
-                            <img src="images/servicios/1-derecho_civil.png" class="imagen_tarjeta_superior" alt="Servicio 1">
-                        </div>
-                    </div>
-                    <div class="cuerpo_tarjeta">
-                        <h5 class="titulo_tarjeta">Derecho Civil</h5>
-                        <p class="texto_tarjeta">Daños y perjuicios por accidente de tránsito. Prescripción Adquisitiva. Sucesiones. Contratos. Desalojos.</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="contenedor_tarjeta">
-                <div class="tarjeta">
-                    <div class="imagen_tarjeta">
-                        <div class="imagen">
-                            <img src="images/servicios/2-derecho_familia.png" class="imagen_tarjeta_superior" alt="Servicio 2">
-                        </div>
-                    </div>
-                    <div class="cuerpo_tarjeta">
-                        <h5 class="titulo_tarjeta">Derecho de Familia</h5>
-                        <p class="texto_tarjeta">Cuotas Alimentarias. Régimen de comunicación. Cuidado Personal. Adición/ sustracción de nombre y apellido. Divorcios.</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="contenedor_tarjeta">
-                <div class="tarjeta">
-                    <div class="imagen_tarjeta">
-                        <div class="imagen">
-                            <img src="images/servicios/3-administrativo.png" class="imagen_tarjeta_superior" alt="Servicio 3">
-                        </div>
-                    </div>
-                    <div class="cuerpo_tarjeta">
-                        <h5 class="titulo_tarjeta">Derecho Administrativo</h5>
-                        <p class="texto_tarjeta">Levantamiento de secuestros de vehículos.</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="contenedor_tarjeta">
-                <div class="tarjeta">
-                    <div class="imagen_tarjeta">
-                        <div class="imagen">
-                            <img src="images/servicios/4-previsional.png" class="imagen_tarjeta_superior" alt="Servicio 4">
-                        </div>
-                    </div>
-                    <div class="cuerpo_tarjeta">
-                        <h5 class="titulo_tarjeta">Derecho Previsional</h5>
-                        <p class="texto_tarjeta">Jubilaciones ordinarias. Jubilaciones especiales. Pensiones.</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="contenedor_tarjeta">
-                <div class="tarjeta">
-                    <div class="imagen_tarjeta">
-                        <div class="imagen">
-                            <img src="images/servicios/5-marcas_y_pantentes.png" class="imagen_tarjeta_superior" alt="Servicio 5">
-                        </div>
-                    </div>
-                    <div class="cuerpo_tarjeta">
-                        <h5 class="titulo_tarjeta">Marcas y Patentes</h5>
-                        <p class="texto_tarjeta">Inscripción de marcas y patentes. Asesoramiento a pymes.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="contenedor_tarjeta">
-                <div class="tarjeta">
-                    <div class="imagen_tarjeta">
-                        <div class="imagen">
-                            <img src="images/servicios/7-tributario.png" class="imagen_tarjeta_superior" alt="Extrajudiciales">
-                        </div>
-                    </div>
-                    <div class="cuerpo_tarjeta">
-                        <h5 class="titulo_tarjeta">Derecho Tributario</h5>
-                        <p class="texto_tarjeta">Asesoramiento a personas y empresas. Defensa contra actos de autoridad: ARCA, y/otros. Asesoría fiscal sobre herencias, donaciones, enajenación de bienes</p>
-                    </div>
-                </div>
-            </div>
-            <div class="contenedor_tarjeta">
-                <div class="tarjeta">
-                    <div class="imagen_tarjeta">
-                        <div class="imagen">
-                            <img src="images/servicios/6-extrajudiciales.png" class="imagen_tarjeta_superior" alt="Extrajudiciales">
-                        </div>
-                    </div>
-                    <div class="cuerpo_tarjeta">
-                        <h5 class="titulo_tarjeta">Extrajudiciales</h5>
-                        <p class="texto_tarjeta">Acompañamiento a mediación. Carta documentos. Redacción de contratos. Gestorías.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    .landing-hero-content {
+    padding-bottom: 40vh;
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 0 2rem;
+      max-width: 64rem;
+    }
+
+    .landing-hero-logo {
+      margin-bottom: 3rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .landing-logo-img {
+      height: 20rem;
+      width: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+  .landing-logo-img {
+    min-height: 30vh;
+    width: auto;
+    object-fit: contain;
+  }
+}
+
+    .landing-hero-title {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      color: var(--text);
+      margin-bottom: 2rem;
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+    }
+
+    .landing-hero-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--text-muted);
+      max-width: 32rem;
+      margin: 0 auto;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+
+    .landing-hero-divider {
+      margin-top: 3rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .landing-hero-divider::before {
+      content: '';
+      width: 1px;
+      height: 6rem;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+    }
+
+    .landing-services {
+      padding: 5rem 0;
+      background: var(--bg);
+      overflow: hidden;
+    }
+
+    .landing-services-container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .services-carousel {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .carousel-container {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .carousel-track {
+      display: flex;
+      width: calc(250px * 14); /* 7 originales + 7 duplicados */
+      animation: slide-right 30s linear infinite;
+    }
+
+    .service-item {
+      width: 250px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, var(--surface), var(--surface-2));
+      border: 1px solid rgba(136, 143, 134, 0.3);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      margin: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+      border-color: var(--accent);
+    }
+
+    .service-item a {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      height: 100%;
+      justify-content: center;
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-title {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: var(--text);
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .service-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    @keyframes slide-right {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); } /* Mueve la mitad para loop infinito */
+    }
+
+    .landing-about {
+      padding: 5rem 0;
+      background: var(--surface);
+    }
+
+    .landing-about-container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .landing-about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .landing-about-text {
+      order: 2;
+    }
+
+    .landing-about-tag {
+      font-family: 'Inter', sans-serif;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 2rem;
+      display: block;
+    }
+
+    .landing-about-quote {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      color: var(--text);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin: 0;
+    }
+
+    .landing-about-desc {
+      order: 1;
+      padding-left: 0;
+      border-left: none;
+    }
+
+    .landing-about-para {
+      color: var(--text-muted);
+      font-family: 'Inter', sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.4;
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+
+    .landing-about-accent {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .landing-accent-line {
+      width: 3rem;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .landing-accent-text {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: var(--text);
+      font-size: 0.875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    @media (min-width: 768px) {
+      .landing-about-grid {
+        grid-template-columns: 3fr 2fr;
+        gap: 4rem;
+      }
+
+      .landing-about-text {
+        order: 1;
+      }
+
+      .landing-about-desc {
+        order: 2;
+        padding-left: 2rem;
+        border-left: 1px solid rgba(136, 143, 134, 0.3);
+      }
+    }
+      .landing-logo-img {
         
-    </section>
+        height: 50vh;
+      }
+    @media (max-width: 768px) {
+      .landing-hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 2rem 0;
+      }
 
-    <section id="nosotros" class="section nosotros">
-        <div class="separador">
-            <h2>QUIÉNES SOMOS</h2>
-        </div>
-        <div class="nosotros-container">
-            <div class="card-nosotros">
-                <img src="images/nosotros/flor3.jpg" alt="Imagen 1">
-                <div class="card-content">
-                    <h3>Dra. Florencia Velazques Ayarde</h3>
-                </div>
-            </div>
-            <div class="card-nosotros">
-                <img src="images/nosotros/miki1.jpg" alt="Imagen 2">
-                <div class="card-content">
-                    <h3>Lic. Micaela Celeste Campos
-                    </h3>
-                </div>
-            </div>
-        </div>
-    </section>
+      .landing-hero-logo {
+        margin-bottom: 2rem;
+      }
 
-        <section id="blog" class="section blog">
-        <div class="separador">
-            <h2>REDES</h2>
-        </div>
+      .landing-logo-img {
+        height: 6rem;
+      }
 
-        <div class="slider-container">
-            <button class="arrow left">❮</button>
-            <div class="cards-wrapper">
+      .landing-hero-title {
+        font-size: clamp(2rem, 8vw, 3rem);
+        margin-bottom: 1.5rem;
+      }
 
-                <div class="card-blog" id="card1">
-<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DAWvoLePga5/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DAWvoLePga5/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver esta publicación en Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DAWvoLePga5/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Una publicación compartida de Estudio Jurídico Integral (@abg.florencia)</a></p></div></blockquote>
-<script async src="//www.instagram.com/embed.js"></script>
-                </div>
-                <div class="card-blog" id="card1">
-<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DAi0hiAO0bc/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DAi0hiAO0bc/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver esta publicación en Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DAi0hiAO0bc/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Una publicación compartida de Estudio Jurídico Integral (@abg.florencia)</a></p></div></blockquote>
-<script async src="//www.instagram.com/embed.js"></script>                </div>
-                <div class="card-blog" id="card2">
-<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C7hvvt0vNOT/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/C7hvvt0vNOT/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver esta publicación en Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/C7hvvt0vNOT/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Una publicación compartida de Estudio Jurídico Integral (@abg.florencia)</a></p></div></blockquote>
-<script async src="//www.instagram.com/embed.js"></script>
-                </div>
-                <div class="card-blog" id="card2">
-<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C8ZmIYaOqBT/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/C8ZmIYaOqBT/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver esta publicación en Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/C8ZmIYaOqBT/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Una publicación compartida de Estudio Jurídico Integral (@abg.florencia)</a></p></div></blockquote>
-<script async src="//www.instagram.com/embed.js"></script>
-                </div>
-                <div class="card-blog" id="card3">
-<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DA4lDektxFq/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DA4lDektxFq/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver esta publicación en Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DA4lDektxFq/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Una publicación compartida de Estudio Jurídico Integral (@abg.florencia)</a></p></div></blockquote>
-<script async src="//www.instagram.com/embed.js"></script>
-                </div>
-            </div>
-            <button class="arrow right">❯</button>
-        </div> -->
-        <!--<a href="#" class="boton-blog">Ver todos los post</a>-->
-    </section>
+      .landing-hero-subtitle {
+        font-size: 1rem;
+      }
 
-    <section id="contacto" class="section contacto">
-        <div class="separador">
-            <h2>CONTACTO</h2>
-        </div>
-        <div class="contacto-container">
-            <div class="mapa">
-                <p><strong>Barrio Mirasoles Manzana 498 A casa 15, Ciudad de Salta</strong></p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14495.961561195005!2d-65.43247211085877!3d-24.727210180091937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc1a2f7a2f6bb%3A0xbf3b8bce82918d8e!2sEstudio%20Juridico%20Integral%20Velazques%20Ayarde!5e0!3m2!1ses-419!2sar!4v1741299698189!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="derecha">
-                <h3>¡Contactanos!</h3>
-                <div class="datos-contacto">
-                    <form name="contacto-form" method="POST" data-netlify="true">
-                        <input type="hidden" name="form-name" value="contacto-form">
+      .landing-hero-divider {
+        margin-top: 2rem;
+      }
 
-                        <!-- Honeypot opcional (antibot) -->
-                        <p style="display:none">
-                            <label>No llenar si sos humano: <input name="bot-field"></label>
-                        </p>
+      .landing-hero-divider::before {
+        height: 4rem;
+      }
 
-                        <div class="entrada">
-                            <label for="nombre">Nombre y apellido</label>
-                            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                            <small class="error" id="errorNombre" style="color:red; display:none;"></small>
-                        </div>
+      .landing-services {
+        padding: 3rem 0;
+      }
 
-                        <div class="entrada">
-                            <label for="telefono">Número de teléfono</label>
-                            <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono" required>
-                            <div id="errorTelefono" class="error-message" style="color:red; display:none;">Solo se pueden ingresar números</div>
-                        </div>
+      .carousel-track {
+        width: calc(200px * 14);
+      }
 
-                        <div class="entrada">    
-                            <label for="correo">Correo electrónico</label>
-                            <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
-                            <small class="error" id="errorCorreo" style="color:red; display:none;"></small>
-                        </div>
+      .service-item {
+        width: 200px;
+        margin: 0 0.5rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+      }
 
-                        <div class="entrada">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
-                            <small class="error" id="errorMensaje" style="color:red; display:none;"></small>
-                        </div>   
+      .service-icon {
+        font-size: 2rem;
+      }
 
-                        <button type="submit">Enviar</button>
-                        </form>
-                        <!-- Mensajes -->
-                        <div id="mensajeError" style="display:none; color: red; margin-top: 15px;">
-                        Error al enviar el formulario, por favor intenta de nuevo.
-                        </div>
-                        <div id="mensajeExito" style="display:none; color: green; margin-top: 15px;">
-                        ¡Gracias! Tu mensaje fue enviado correctamente.
-                        </div>
+      .service-title {
+        font-size: 1rem;
+      }
 
-                </div>
-            </div>
-        </div>
-    </section>
-<footer class="footer">
-  <div class="footer-content">
+      .service-desc {
+        font-size: 0.75rem;
+      }
 
-    <!-- Sección izquierda -->
-    <div class="footer-section">
-      <h3>Contacto</h3>
-      <a href="tel:+5493876570793"><i class="fas fa-phone-alt"></i> +54 9 387 657 0793</a>
-      <a href="mailto:abogadaflorenciavelazques@gmail.com"><i class="fas fa-envelope"></i> abogadaflorenciavelazques@gmail.com</a>
-      <a href="https://wa.me/5493876570793" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      <p style="margin-top: 0.5rem; font-style: italic; color: var(--verde-claro);">🕒 Atención con turno previo</p>
+      .landing-about {
+        padding: 3rem 0;
+      }
+
+      .landing-about-grid {
+        gap: 2rem;
+      }
+
+      .landing-about-quote {
+        font-size: clamp(1.25rem, 5vw, 2rem);
+      }
+    }
+  </style>
+</head>
+<body class="page-body">
+<nav class="navbar">
+  <div class="navbar-container">
+    <img class="navbar-logo" src="/images/logos/fv_verde1.png"/>
+
+    <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fas fa-bars" aria-hidden="true"></i></span>
+    </button>
+
+    <div class="navbar-menu">
+      <a class="nav-link nav-link-active" href="index.html">Inicio</a>
+      <a class="nav-link" href="servicios.html">Servicios</a>
+      <a class="nav-link" href="nosotros.html">Quienes somos</a>
+      <a class="nav-link" href="contacto.html">Contacto</a>
     </div>
+  </div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="landing-hero">
+<div class="landing-hero-bg">
+<img alt="Statue of Justice" class="landing-hero-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFGSkQeGKF2ul0dWxR9zvYFAlbc8VkhBQJVVlSXrKtRyFsxm2opZl9h6p8UlJidNKDok4NHRo_-uIQUk6s8uieeBq80OTrIo6yQEbpo6BKhsi4mv3wiuPrQ6ySCuy51kM4Lqk7uTZTTsc486HtKd2RlmmDt2fTd9qWE6MeI367P2RxkDA0YMdzzkUpaiRQkqJyhJ4venbP1bBKMgDWxtxra09THQ68D5rb4B_2yAkFu0qkJAlmEuxH1kk9YLNLXkG9LVHxmMUDK6IX"/>
+<div class="landing-hero-overlay"></div>
+</div>
+<div class="landing-hero-content">
+<h1 class="landing-hero-title">
+                     
 
-    <!-- Sección central que NO se toca -->
-    <div class="footer-section">
-      <a class="img-footer" href="#">
-        <img src="images/sera_justicia-07.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top" id="logo-img">
-      </a>
-      <div class="redes-sociales-footer">
-        <a href="tel:+5493876570793" target="_blank" class="red-social-footer">
-          <i class="fas fa-phone-alt"></i>
+    
+                </h1>
+<p class="landing-hero-subtitle">
+                    Estudio Jurídico Integral especializado en soluciones precisas para un mundo complejo.
+                </p>
+<div class="landing-hero-logo">
+<img alt="Studio Logo" class="landing-logo-img" src="images/marca.png"/>
+</div>
+</section>
+<!-- Services Preview Section (Carrusel Horizontal) -->
+<section class="landing-services">
+<div class="landing-services-container">
+<div class="services-carousel">
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <div class="service-item" data-service="civil">
+        <a href="/servicio_derecho_civil.html">
+          <span class="material-symbols-outlined service-icon">gavel</span>
+          <h3 class="service-title">Derecho Civil</h3>
+          <p class="service-desc">Contratos, responsabilidad civil y litigios enfocados en la protección de sus derechos.</p>
         </a>
-        <a href="https://www.instagram.com/abg.florencia/" target="_blank" class="red-social-footer">
-          <i class="fab fa-instagram"></i> 
+      </div>
+      <div class="service-item" data-service="familia">
+        <a href="/servicio_derecho_familia.html">
+          <span class="material-symbols-outlined service-icon">family_restroom</span>
+          <h3 class="service-title">Derecho de Familia</h3>
+          <p class="service-desc">Resolución de conflictos familiares con sensibilidad y discreción.</p>
         </a>
-        <a href="https://www.facebook.com/profile.php?id=61558880305161" target="_blank" class="red-social-footer">
-          <i class="fab fa-facebook"></i> 
+      </div>
+      <div class="service-item" data-service="administrativo">
+        <a href="/servicio_derecho_administrativo.html">
+          <span class="material-symbols-outlined service-icon">account_balance</span>
+          <h3 class="service-title">Derecho Administrativo</h3>
+          <p class="service-desc">Gestión y cumplimiento normativo ante organismos públicos.</p>
         </a>
-        <a href="https://wa.me/5493876570793" target="_blank" class="red-social-footer">
-          <i class="fab fa-whatsapp"></i> 
+      </div>
+      <div class="service-item" data-service="previsional">
+        <a href="/servicio_derecho_previsional.html">
+          <span class="material-symbols-outlined service-icon">elderly</span>
+          <h3 class="service-title">Derecho Previsional</h3>
+          <p class="service-desc">Jubilaciones y pensiones con enfoque estratégico y seguro.</p>
         </a>
-        <a href="mailto:abogadaflorenciavelazques@gmail.com" target="_blank" class="red-social-footer">
-          <i class="fas fa-envelope"></i> 
-        </a>                    
+      </div>
+      <div class="service-item" data-service="marcas">
+        <a href="/servicio_marcas_y_patentes.html">
+          <span class="material-symbols-outlined service-icon">verified</span>
+          <h3 class="service-title">Marcas y Patentes</h3>
+          <p class="service-desc">Protección de su propiedad intelectual y activos estratégicos.</p>
+        </a>
+      </div>
+      <div class="service-item" data-service="tributario">
+        <a href="/servicio_derecho_tributario.html">
+          <span class="material-symbols-outlined service-icon">payments</span>
+          <h3 class="service-title">Derecho Tributario</h3>
+          <p class="service-desc">Optimización fiscal y defensa ante organismos recaudadores.</p>
+        </a>
+      </div>
+      <div class="service-item" data-service="extrajudiciales">
+        <a href="/servicio_extrajudiciales.html">
+          <span class="material-symbols-outlined service-icon">handshake</span>
+          <h3 class="service-title">Gestiones Extrajudiciales</h3>
+          <p class="service-desc">Mediación y negociación estratégica para resolver conflictos sin recurrir a instancias judiciales.</p>
+        </a>
+      </div>
+      <!-- Duplicados para infinito -->
+      <div class="service-item" data-service="civil">
+        <a href="/servicio_derecho_civil.html">
+          <span class="material-symbols-outlined service-icon">gavel</span>
+          <h3 class="service-title">Derecho Civil</h3>
+          <p class="service-desc">Contratos, responsabilidad civil y litigios enfocados en la protección de sus derechos.</p>
+        </a>
+      </div>
+      <div class="service-item" data-service="familia">
+        <a href="/servicio_derecho_familia.html">
+          <span class="material-symbols-outlined service-icon">family_restroom</span>
+          <h3 class="service-title">Derecho de Familia</h3>
+          <p class="service-desc">Resolución de conflictos familiares con sensibilidad y discreción.</p>
+        </a>
+      </div>
+      <div class="service-item" data-service="administrativo">
+        <a href="/servicio_derecho_administrativo.html">
+          <span class="material-symbols-outlined service-icon">account_balance</span>
+          <h3 class="service-title">Derecho Administrativo</h3>
+          <p class="service-desc">Gestión y cumplimiento normativo ante organismos públicos.</p>
+        </a>
+      </div>
+      <div class="service-item" data-service="previsional">
+        <a href="/servicio_derecho_previsional.html">
+          <span class="material-symbols-outlined service-icon">elderly</span>
+          <h3 class="service-title">Derecho Previsional</h3>
+          <p class="service-desc">Jubilaciones y pensiones con enfoque estratégico y seguro.</p>
+        </a>
+      </div>
+      <div class="service-item" data-service="marcas">
+        <a href="/servicio_marcas_y_patentes.html">
+          <span class="material-symbols-outlined service-icon">verified</span>
+          <h3 class="service-title">Marcas y Patentes</h3>
+          <p class="service-desc">Protección de su propiedad intelectual y activos estratégicos.</p>
+        </a>
+      </div>
+      <div class="service-item" data-service="tributario">
+        <a href="/servicio_derecho_tributario.html">
+          <span class="material-symbols-outlined service-icon">payments</span>
+          <h3 class="service-title">Derecho Tributario</h3>
+          <p class="service-desc">Optimización fiscal y defensa ante organismos recaudadores.</p>
+        </a>
+      </div>
+      <div class="service-item" data-service="extrajudiciales">
+        <a href="/servicio_extrajudiciales.html">
+          <span class="material-symbols-outlined service-icon">handshake</span>
+          <h3 class="service-title">Gestiones Extrajudiciales</h3>
+          <p class="service-desc">Mediación y negociación estratégica para resolver conflictos sin recurrir a instancias judiciales.</p>
+        </a>
       </div>
     </div>
-
-    <!-- Sección derecha -->
-    <div class="footer-section">
-      <h3>Ubicación</h3>
-      <a href="https://maps.app.goo.gl/goGy7ivc9SQD79vU8" target="_blank">
-        Barrio Mirasoles Manzana 498 A casa 15, Ciudad de Salta
-      </a>
-      <p>Estudio Jurídico Integral<br>Velazques Ayarde</p>
+  </div>
+</div>
+</div>
+</section>
+<!-- About Snippet -->
+<section class="landing-about">
+<div class="landing-about-container">
+<div class="landing-about-grid">
+<div class="landing-about-text">
+<span class="landing-about-tag">Nuestra Filosofía</span>
+<blockquote class="landing-about-quote">
+                        "Entendemos el derecho no solo como un conjunto de normas, sino como una herramienta para <span class="text-accent">restaurar el equilibrio</span> y proyectar seguridad en el futuro de nuestros representados."
+                    </blockquote>
+</div>
+<div class="landing-about-desc">
+<p class="landing-about-para">
+                        En Florencia velazques A. Abogada, cada caso es tratado como una pieza única. Nuestra práctica se basa en la artesanía legal: dedicación absoluta, atención al detalle y una ética inquebrantable que define nuestra trayectoria en el sector.
+                    </p>
+<div class="landing-about-accent">
+<div class="landing-accent-line"></div>
+<span class="landing-accent-text">EST. JURÍDICO velazques</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+      <div>
+        <h4 class="footer-title">Contacto</h4>
+        <div class="footer-contact-list">
+          <a href="tel:+5493876570793" class="footer-link"><span class="material-symbols-outlined">call</span><span>+54 9 387 657 0793</span></a>
+          <a href="mailto:abogadaflorenciavelazques@gmail.com" class="footer-link"><span class="material-symbols-outlined">mail</span><span>abogadaflorenciavelazques@gmail.com</span></a>
+          <a href="https://wa.me/5493876570793" target="_blank" class="footer-link"><span class="material-symbols-outlined">chat</span><span>WhatsApp</span></a>
+          <div class="footer-item"><span class="material-symbols-outlined">schedule</span><span>Atención con turno previo</span></div>
+        </div>
+      </div>
+      <div class="footer-center">
+        <img class="footer-logo" src="images/sera_justicia-07.png"/>
+        <div class="footer-social-icons">
+          <a href="tel:+5493876570793" class="social-icon"><i class="fa-solid fa-phone"></i></a>
+          <a href="https://www.instagram.com/abg.florencia/" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61558880305161" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://wa.me/5493876570793" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:abogadaflorenciavelazques@gmail.com" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-location">
+        <h4 class="footer-title">Ubicación</h4>
+        <a href="https://maps.app.goo.gl/goGy7ivc9SQD79vU8" target="_blank" class="footer-address">Barrio Mirasoles Manzana 498 A<br>casa 15, Ciudad de Salta</a>
+        <p class="footer-company">Estudio Jurídico Integral<br>Velazques Ayarde</p>
+      </div>
     </div>
-
   </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 Estudio Jurídico Integral Velazques Ayarde. Todos los derechos reservados.</p>
-  </div>
+  <div class="footer-bottom"><p class="footer-copyright">© 2025 Estudio Jurídico Integral Velazques Ayarde. Todos los derechos reservados.</p></div>
 </footer>
 
-</body>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-<script src="script.js"></script>
-</html>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const telefonoInput = document.getElementById('telefono');
-  const errorTelefono = document.getElementById('errorTelefono');
+document.addEventListener('DOMContentLoaded', function() {
+  const track = document.querySelector('.carousel-track');
+  const carousel = document.querySelector('.carousel-container');
+  let isHovered = false;
+  let mouseX = 0;
+  let baseSpeed = 1; // Velocidad base (positivo = derecha, antihorario)
+  let currentSpeed = baseSpeed;
+  let position = 0;
+  let animationId;
 
-  telefonoInput.addEventListener('keypress', function(event) {
-    const allowedChars = /[0-9+\-\(\)\s]/;
-    const key = event.key;
-
-    if (!allowedChars.test(key)) {
-      event.preventDefault();
-      telefonoInput.classList.add('error');
-      errorTelefono.style.display = 'block';
+  function animate() {
+    if (isHovered) {
+      const rect = carousel.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      // Si mouse a la izquierda del centro, acelera a la derecha (antihorario)
+      // Si a la derecha, acelera a la izquierda (horario)
+      const direction = mouseX < centerX ? 1 : -1;
+      currentSpeed = baseSpeed * 3 * direction; // Acelera en la dirección
     } else {
-      telefonoInput.classList.remove('error');
-      errorTelefono.style.display = 'none';
+      currentSpeed = baseSpeed; // Vuelve a velocidad base
     }
+
+    position += currentSpeed;
+    // Reset position para loop infinito
+    const itemWidth = window.innerWidth <= 768 ? 200 : 250;
+    const trackWidth = itemWidth * 7; // Ancho de 7 tarjetas
+    if (position >= trackWidth) {
+      position = 0;
+    } else if (position < 0) {
+      position = trackWidth;
+    }
+
+    track.style.transform = `translateX(-${position}px)`;
+    animationId = requestAnimationFrame(animate);
+  }
+
+  // Eventos del mouse
+  carousel.addEventListener('mouseenter', (e) => {
+    isHovered = true;
+    mouseX = e.clientX;
   });
 
-  telefonoInput.addEventListener('input', function() {
-    const value = telefonoInput.value;
-    const valid = /^[0-9+\-\(\)\s]*$/.test(value);
-    if (valid) {
-      telefonoInput.classList.remove('error');
-      errorTelefono.style.display = 'none';
-    } else {
-      telefonoInput.classList.add('error');
-      errorTelefono.style.display = 'block';
-    }
+  carousel.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
   });
+
+  carousel.addEventListener('mouseleave', () => {
+    isHovered = false;
+  });
+
+  // Eventos touch para móvil
+  carousel.addEventListener('touchstart', (e) => {
+    isHovered = true;
+    mouseX = e.touches[0].clientX;
+  });
+
+  carousel.addEventListener('touchmove', (e) => {
+    mouseX = e.touches[0].clientX;
+  });
+
+  carousel.addEventListener('touchend', () => {
+    isHovered = false;
+  });
+
+  // Iniciar animación
+  animate();
+
+  // Navbar toggle
+  const toggler = document.querySelector('.navbar-toggler');
+  const menu = document.querySelector('.navbar-menu');
+  if(toggler && menu) {
+    toggler.onclick = function() {
+      menu.classList.toggle('active');
+    };
+  }
 });
 </script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById('miFormulario').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    document.querySelectorAll('.error').forEach(el => el.style.display = 'none');
-    document.getElementById('mensajeError').style.display = 'none';
-
-    const nombre = document.getElementById('nombre').value.trim();
-    const telefono = document.getElementById('telefono').value.trim();
-    const correo = document.getElementById('correo').value.trim();
-    const mensaje = document.getElementById('mensaje').value.trim();
-
-    let valid = true;
-
-    if (!/^[a-zA-ZÀ-ÿ\s]+$/.test(nombre)) {
-      document.getElementById('errorNombre').textContent = 'El nombre solo puede contener letras y espacios.';
-      document.getElementById('errorNombre').style.display = 'block';
-      valid = false;
-    }
-
-    if (!/^[0-9+\s\-\(\)]+$/.test(telefono)) {
-      document.getElementById('errorTelefono').textContent = 'El teléfono contiene caracteres inválidos.';
-      document.getElementById('errorTelefono').style.display = 'block';
-      valid = false;
-    }
-
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(correo)) {
-      document.getElementById('errorCorreo').textContent = 'Ingrese un correo válido.';
-      document.getElementById('errorCorreo').style.display = 'block';
-      valid = false;
-    }
-
-    if (mensaje.length < 10 || /[<>]/.test(mensaje)) {
-      document.getElementById('errorMensaje').textContent = 'El mensaje debe tener al menos 10 caracteres.';
-      document.getElementById('errorMensaje').style.display = 'block';
-      valid = false;
-    }
-
-    if (!valid) return;
-
-    const form = event.target;
-    const data = new FormData(form);
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(data).toString()
-    })
-    .then(response => {
-      if (response.ok) {
-        form.style.display = 'none';
-        document.getElementById('mensajeExito').style.display = 'block';
-      } else {
-        document.getElementById('mensajeError').style.display = 'block';
-      }
-    })
-    .catch(() => {
-      document.getElementById('mensajeError').style.display = 'block';
-    });
-  });
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const sliderContainer = document.querySelector('.slider-container');
-  const cardsWrapper = document.querySelector('.cards-wrapper');
-  const cards = document.querySelectorAll('.card-blog');
-  const leftArrow = document.querySelector('.arrow.left');
-  const rightArrow = document.querySelector('.arrow.right');
-
-  let currentIndex = 0;
-
-  const scrollToCard = () => {
-    const card = cards[0];
-    const cardWidth = card.offsetWidth;
-    const gap = parseFloat(getComputedStyle(cardsWrapper).gap || 0);
-    const offset = (cardWidth + gap) * currentIndex;
-    cardsWrapper.style.transform = `translateX(-${offset}px)`;
-  };
-
-  rightArrow?.addEventListener('click', () => {
-    if (currentIndex < cards.length - 1) {
-      currentIndex++;
-      scrollToCard();
-    }
-  });
-
-  leftArrow?.addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      scrollToCard();
-    }
-  });
-
-  window.addEventListener('resize', scrollToCard);
-});
-</script>
+</body></html>
