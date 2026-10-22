@@ -14,6 +14,7 @@
 
   <!-- Font Awesome (LA PIEZA QUE TE FALTABA) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/styles/navbar-services.css">
 
   <script>
     tailwind.config = {
@@ -53,7 +54,18 @@
 
     <div class="hidden md:flex space-x-10 text-sm">
       <a class="text-gray-400 hover:text-primary" href="#">Inicio</a>
-      <a class="text-primary border-b border-primary pb-1" href="#">Servicios</a>
+      <details class="nav-services">
+        <summary class="text-primary border-b border-primary pb-1">Servicios</summary>
+        <div class="nav-services-menu">
+          <a href="/servicio_derecho_civil.html">Derecho Civil</a>
+          <a href="/servicio_derecho_familia.html">Derecho de Familia</a>
+          <a href="/servicio_derecho_administrativo.html">Derecho Administrativo</a>
+          <a href="/servicio_derecho_previsional.html">Derecho Previsional</a>
+          <a href="/servicio_marcas_y_patentes.html">Marcas y Patentes</a>
+          <a href="/servicio_extrajudiciales.html">Gestiones Extrajudiciales</a>
+          <a href="/servicio_derecho_tributario.html">Derecho Tributario</a>
+        </div>
+      </details>
       <a class="text-gray-400 hover:text-primary" href="#">Quienes somos</a>
       <a class="text-gray-400 hover:text-primary" href="#">Contacto</a>
     </div>

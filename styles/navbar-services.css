@@ -1,0 +1,66 @@
+.nav-services {
+  position: relative;
+}
+
+.nav-services > summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.nav-services > summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-services > summary::after {
+  content: "▾";
+  display: inline-block;
+  margin-left: 0.45em;
+  font-size: 0.75em;
+  transition: transform 0.2s ease;
+}
+
+.nav-services[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+.nav-services-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  z-index: 10000;
+  display: grid;
+  min-width: 15rem;
+  padding: 0.5rem;
+  background: rgba(18, 20, 20, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.35);
+}
+
+.nav-services-menu a {
+  display: block;
+  padding: 0.65rem 0.75rem;
+  color: var(--gris, #ddd);
+  text-decoration: none;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-services-menu a:hover,
+.nav-services-menu a:focus-visible {
+  color: var(--blanco, #fff);
+  background: rgba(187, 204, 171, 0.14);
+}
+
+@media (max-width: 768px) {
+  .nav-services-menu {
+    position: static;
+    min-width: 0;
+    margin: 0 1rem 0.5rem;
+    box-shadow: none;
+  }
+
+  .nav-services-menu a {
+    padding: 0.65rem 0.75rem;
+  }
+}
